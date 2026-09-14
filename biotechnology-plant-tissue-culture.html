@@ -1,0 +1,3100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="icon.jpg">
+
+    <title>
+        Biotechnology - Plant Tissue Culture | LARI
+    </title>
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- SAME CSS AS OTHER LARI PAGES -->
+
+    <link rel="stylesheet"
+          href="stations.css">
+
+          <!-- HEADER CSS: same as index.html and kept only inside this HTML file -->
+     <style>
+/* =========================================================
+   INDEX HEADER FOUNDATION
+   Keeps this header independent from aboutus.css
+========================================================= */
+
+.header {
+    --olive: #667A3E;
+    --olive-dark: #4F6230;
+    --olive-light: #EEF2E6;
+    --white: #FFFFFF;
+    --border: #E2E4DA;
+    --dark: #26301F;
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --transition: all 0.3s ease;
+
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header *,
+.header *::before,
+.header *::after {
+    box-sizing: border-box;
+}
+
+.header .container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header button {
+    font-family: inherit;
+}
+
+.main-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 1000;
+}.header-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}.logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}.navbar {
+    margin-left: auto;
+}.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}.nav-list > li {
+    position: relative;
+}.nav-list > li > a {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 12px 10px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}.nav-list > li > a:hover,
+.nav-list > li > a.active {
+    color: var(--olive);
+}.nav-list > li > a.active {
+    position: relative;
+}.nav-list > li > a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 2px;
+
+    height: 2px;
+
+    background-color: var(--olive);
+}.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    left: 0;
+
+    min-width: 220px;
+
+    background-color: var(--white);
+
+    border-top: 3px solid var(--olive);
+
+    box-shadow: var(--shadow-md);
+
+    border-radius: 0 0 8px 8px;
+
+    padding: 8px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: var(--transition);
+}.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}.dropdown-menu li a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}.dropdown-menu li a:hover {
+    background-color: var(--olive-light);
+
+    color: var(--olive-dark);
+
+    padding-left: 23px;
+}.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}.search-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--white);
+
+    border-radius: 50%;
+
+    color: var(--olive-dark);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}.search-btn:hover {
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-color: var(--olive);
+}.mobile-menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}@media (max-width: 1100px) {.nav-list {
+        gap: 0;
+    }.nav-list > li > a {
+        padding: 10px 7px;
+
+        font-size: 13px;
+    }}@media (max-width: 850px) {.header-content {
+        min-height: 75px;
+    }.logo img {
+        width: 52px;
+        height: 52px;
+    }.navbar {
+        display: none;
+    }.header-actions {
+        margin-left: auto;
+    }.mobile-menu-btn {
+        display: block;
+    }}@media (max-width: 600px) {.header-actions {
+        gap: 6px;
+    }.search-btn,
+    .mobile-menu-btn {
+        width: 38px;
+        height: 38px;
+    }}.profile-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}.profile-title {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1f6b45;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}.profile-subtitle {
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    color: #666;
+
+    max-width: 210px;
+}@keyframes profileFlip {
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    45% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    95% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}@media (max-width: 1100px) {.profile-title {
+        font-size: 16px;
+    }.profile-subtitle {
+        font-size: 9px;
+    }}@media (max-width: 600px) {.header-profile-flip {
+        width: 180px;
+        height: 58px;
+    }.header-profile-front img,
+    .header-profile-back img {
+        width: 52px;
+        height: 52px;
+    }.profile-title {
+        font-size: 14px;
+    }.profile-subtitle {
+        font-size: 8px;
+    }}.language-switcher {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ffffff;
+
+    padding: 5px 10px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}.lang-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 5px 8px;
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}.lang-btn:hover {
+    color: #1d6b3a;
+}.lang-btn.active {
+    background: #1d6b3a;
+
+    color: white;
+}.lang-divider {
+    color: #ccc;
+}html[dir="rtl"] .navbar {
+    margin-left: 0;
+
+    margin-right: auto;
+}html[dir="rtl"] .dropdown-menu {
+    left: auto;
+
+    right: 0;
+}html[dir="rtl"] .dropdown-menu li a:hover {
+    padding-left: 18px;
+
+    padding-right: 23px;
+}html[dir="rtl"] .lang-btn.active {
+    font-weight: bold;
+
+    color: var(--olive);
+}@media (max-width: 850px) {.header-content {
+        position: relative;
+    }.navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: var(--white);
+
+        border-top:
+            1px solid var(--border);
+
+        box-shadow:
+            var(--shadow-md);
+
+        z-index: 3000;
+
+        max-height:
+            calc(100vh - 75px);
+
+        overflow-y: auto;
+    }.navbar.mobile-open {
+        display: block !important;
+    }.nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 8px 0;
+
+        background-color: var(--white);
+    }.nav-list > li {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+
+        border-bottom:
+            1px solid var(--border);
+    }.nav-list > li:last-child {
+        border-bottom: none;
+    }.nav-list > li > a {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        color:
+            var(--dark) !important;
+
+        background-color:
+            var(--white);
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.nav-list > li > a:hover {
+        background-color:
+            var(--olive-light);
+
+        color:
+            var(--olive-dark) !important;
+    }.nav-list > li > a.active::after {
+        display: none;
+    }.dropdown-menu {
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        min-width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-top:
+            1px solid var(--border);
+
+        border-radius: 0;
+
+        background-color:
+            var(--olive-light);
+
+        transition: none;
+    }.dropdown:hover > .dropdown-menu {
+        display: none;
+    }.dropdown.open > .dropdown-menu,
+    .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }.dropdown > a > i {
+        transition:
+            transform 0.25s ease;
+    }.dropdown.open > a > i {
+        transform: rotate(180deg);
+    }.dropdown-menu li {
+        display: block;
+
+        width: 100%;
+    }.dropdown-menu li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 30px;
+
+        color:
+            var(--dark) !important;
+
+        font-size: 14px;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.dropdown-menu li a:hover {
+        background-color: #dfe8cf;
+
+        color:
+            var(--olive-dark) !important;
+    }.mobile-menu-btn {
+        display: block;
+
+        position: relative;
+
+        z-index: 3100;
+
+        flex-shrink: 0;
+    }}@media (max-width: 850px) {html[dir="rtl"] .navbar {
+        left: 0;
+
+        right: 0;
+
+        margin: 0;
+    }html[dir="rtl"] .nav-list > li > a {
+        text-align: right;
+    }html[dir="rtl"] .dropdown-menu {
+        right: auto;
+
+        left: auto;
+    }html[dir="rtl"] .dropdown-menu li a {
+        text-align: right;
+
+        padding:
+            12px
+            30px;
+    }html[dir="rtl"]
+    .dropdown-menu li a:hover {
+        padding-left: 30px;
+
+        padding-right: 35px;
+    }}@media (max-width: 480px) {.header-content {
+        gap: 8px;
+    }.profile-title {
+        font-size: 13px;
+    }.profile-subtitle {
+        font-size: 7px;
+
+        max-width: 95px;
+
+        line-height: 1.2;
+    }.language-switcher {
+        gap: 3px;
+
+        padding: 4px 6px;
+    }.lang-btn {
+        font-size: 11px;
+
+        padding: 4px 5px;
+    }.mobile-menu-btn {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 15px;
+    }}.share-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}.share-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: 50%;
+    color: var(--olive-dark);
+    cursor: pointer;
+    transition: var(--transition);
+}.share-btn:hover,
+.share-btn[aria-expanded="true"] {
+    background-color: var(--olive);
+    color: var(--white);
+    border-color: var(--olive);
+}.share-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 245px;
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--olive);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 3500;
+}.share-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}.share-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 14px;
+    width: 13px;
+    height: 13px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    transform: rotate(45deg);
+}.share-menu-title {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+}.share-socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}.share-option {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}.share-option:hover {
+    transform: translateY(-3px);
+    opacity: 0.88;
+}.share-option.whatsapp { background: #25D366; }.share-option.facebook { background: #1877F2; }.share-option.linkedin { background: #0A66C2; }.share-option.instagram {
+    background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);
+}.share-copy-row {
+    margin-top: 13px;
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--olive-light);
+    border-radius: 7px;
+}.share-copy-text {
+    color: var(--olive-dark);
+    font-size: 12px;
+    font-weight: 700;
+}.share-copy-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--olive-dark);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition);
+}.share-copy-btn:hover {
+    background: var(--olive);
+    color: var(--white);
+}html[dir="rtl"] .share-menu {
+    right: auto;
+    left: 0;
+}html[dir="rtl"] .share-menu::before {
+    right: auto;
+    left: 14px;
+}@media (max-width: 600px) {.share-btn {
+        width: 38px;
+        height: 38px;
+    }.share-menu {
+        position: fixed;
+        top: 88px;
+        right: 4%;
+        left: auto;
+        width: min(245px, 92vw);
+    }.share-menu::before {
+        display: none;
+    }html[dir="rtl"] .share-menu {
+        right: auto;
+        left: 4%;
+    }}@media (max-width: 480px) {.share-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }.share-menu {
+        top: 82px;
+    }}
+    
+
+/* IMPORTANT: keep header dropdowns independent from page dropdown CSS */
+.header .navbar .dropdown-menu {
+    display: block;
+    bottom: auto;
+    white-space: normal;
+}
+
+@media (max-width: 850px) {
+    .header .navbar .dropdown-menu {
+        display: none;
+    }
+
+    .header .navbar .dropdown.open > .dropdown-menu,
+    .header .navbar .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+        <!-- Main Header -->
+        <div class="main-header">
+
+            <div class="container header-content">
+
+
+                <!-- =================================================
+     LARI LOGO
+================================================== -->
+
+<a href="index.html" class="logo">
+
+    <img src="icon.jpg"
+         alt="LARI Logo">
+
+    <div class="profile-text">
+
+        <span class="profile-title"
+              data-i18n="profileTitle">
+            LARI
+        </span>
+
+        <span class="profile-subtitle"
+              data-i18n="profileSubtitle">
+            Lebanese Agricultural Research Institute
+        </span>
+
+    </div>
+
+</a>
+
+
+
+                <!-- =================================================
+                     NAVIGATION
+                ================================================== -->
+
+                <nav class="navbar" id="main-navigation">
+
+                    <ul class="nav-list">
+
+
+                        <!-- HOME -->
+
+                        <li>
+
+                            <a href="index.html"
+                               data-i18n="navHome">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             ABOUT US
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#" >
+
+                                <span data-i18n="navAboutus">
+                                    About us
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+
+                                    <a href="aboutus.html"
+                                       data-i18n="navWhoWeAre">
+
+                                        Who We Are
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="history.html"
+                                       data-i18n="navHistory">
+
+                                        History
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="mission.html"
+                                       data-i18n="navMission">
+
+                                        Mission & Vision
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="pdg.html"
+                                       data-i18n="navpdg">
+
+                                        P.D.G of LARI
+
+                                    </a>
+
+                                </li>
+
+
+                                
+                            </ul>
+
+                        </li>
+
+
+
+                         <!-- =================================================
+                             RESEARCH
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navResearch">
+
+            Research
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Current Research -->
+
+        <li>
+
+            <a href="current-research.html"
+               data-i18n="navCurrentResearchh">
+
+                Current Research
+
+            </a>
+
+        </li>
+
+
+        <!-- PUBLICATIONS -->
+
+        <li>
+
+            <a href="publications.html"
+               data-i18n="navPublications">
+
+                Publications
+
+            </a>
+
+        </li>
+
+
+        <!-- EUROPEAN & INTERNATIONAL PROJECTS -->
+
+        <li>
+
+            <a href="european-projects.html"
+               data-i18n="navEuropeanProjects">
+
+                European & International Projects
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             SERVICES
+                        ================================================== -->
+
+                       
+
+<li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navServices">
+
+            Services
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Soil Test-->
+
+        <li>
+
+            <a href="soil-lab.html"
+               data-i18n="navSoilTest">
+
+                Soil Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Water Test -->
+
+        <li>
+
+            <a href="water-unit.html"
+               data-i18n="navWaterTest">
+
+                Water Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Food Test -->
+
+        <li>
+
+            <a href="food-microbiology.html"
+               data-i18n="navFoodTest">
+
+                Food Test
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             STATIONS
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#" class="active">
+
+                                <span data-i18n="navStations">
+                                    Stations
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+                                    <a href="tel-amara.html">
+                                        Tal Amara
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="lebaa.html">
+                                        Lebaa
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="tyre.html">
+                                        Tyre
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="fanar.html">
+                                        Fanar
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="kfarshakhna.html">
+                                        Kfarshakhna
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="abdeh.html">
+                                        Abdeh
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hasbaya.html">
+                                        Hasbaya
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="keserwan.html">
+                                        Keserwan
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="baakline.html">
+                                        Baakline
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="terbol.html">
+                                        Terbol
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hermel.html">
+                                        Hermel
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="kfarden.html">
+                                        Kfarden
+                                    </a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             CONTACT
+                        ================================================== -->
+
+                        <li>
+
+                            <a href="contact.html"
+                               data-i18n="navContactUs">
+
+                                Contact us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </nav>
+
+
+
+                <!-- =================================================
+                     HEADER ACTIONS
+                ================================================== -->
+
+                <div class="header-actions">
+
+
+                    <!-- SEARCH -->
+
+                    <button class="search-btn"
+                            aria-label="Search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+
+                    <!-- SHARE -->
+
+                    <div class="share-wrapper">
+
+                        <button class="share-btn"
+                                id="shareButton"
+                                type="button"
+                                aria-label="Share this page"
+                                aria-expanded="false"
+                                aria-controls="shareMenu">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+
+                        <div class="share-menu"
+                             id="shareMenu"
+                             role="menu"
+                             aria-label="Share this page">
+
+                            <span class="share-menu-title">Share this page</span>
+
+                            <div class="share-socials">
+
+                                <button class="share-option whatsapp"
+                                        type="button"
+                                        data-share="whatsapp"
+                                        aria-label="Share on WhatsApp"
+                                        title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </button>
+
+                                <button class="share-option facebook"
+                                        type="button"
+                                        data-share="facebook"
+                                        aria-label="Share on Facebook"
+                                        title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </button>
+
+                                <button class="share-option linkedin"
+                                        type="button"
+                                        data-share="linkedin"
+                                        aria-label="Share on LinkedIn"
+                                        title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </button>
+
+                                <button class="share-option instagram"
+                                        type="button"
+                                        data-share="instagram"
+                                        aria-label="Copy link for Instagram"
+                                        title="Copy link for Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="share-copy-row">
+                                <span class="share-copy-text" id="shareCopyText">Copy link</span>
+                                <button class="share-copy-btn"
+                                        type="button"
+                                        id="copyShareLink"
+                                        aria-label="Copy page link">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LANGUAGE SWITCHER -->
+
+                    <div class="language-switcher">
+
+                        <button class="lang-btn active"
+                                id="englishBtn"
+                                onclick="changeLanguage('en')">
+
+                            EN
+
+                        </button>
+
+
+                        <span class="lang-divider">
+
+                            |
+
+                        </span>
+
+
+                        <button class="lang-btn"
+                                id="arabicBtn"
+                                onclick="changeLanguage('ar')">
+
+                            العربية
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="mobile-menu-btn"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="research-hero">
+
+    <div class="hero-decoration"></div>
+
+
+    <div class="hero-content">
+
+
+        <span class="hero-label">
+
+            <i class="fa-solid fa-location-dot"
+               style="margin-right:7px;"></i>
+
+            TAL AMARA STATION
+
+        </span>
+
+
+        <h1>
+
+            Biotechnology
+
+            <span>
+                Plant Tissue Culture
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            <i class="fa-solid fa-dna"
+               style="
+                   color:#aeb85a;
+                   margin-right:8px;
+               ">
+            </i>
+
+            In vitro propagation,
+            certified plant material production,
+            micropropagation research
+            and conservation of important plant species.
+
+        </p>
+
+
+        <div class="hero-line"></div>
+
+
+        <div class="hero-tags">
+
+            <span>
+                <i class="fa-solid fa-dna"></i>
+                Biotechnology
+            </span>
+
+            <span>
+                <i class="fa-solid fa-seedling"></i>
+                Micropropagation
+            </span>
+
+            <span>
+                <i class="fa-solid fa-flask"></i>
+                In Vitro
+            </span>
+
+            <span>
+                <i class="fa-solid fa-leaf"></i>
+                Plant Research
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="introduction">
+
+    <div class="container">
+
+
+        <div class="intro-icon">
+
+            <i class="fa-solid fa-dna"></i>
+
+        </div>
+
+
+        <div class="intro-content">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-circle-info"
+                   style="margin-right:6px;"></i>
+
+                PLANT TISSUE CULTURE UNIT
+
+            </span>
+
+
+            <h2>
+                In Vitro Propagation & Plant Biotechnology
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-flask-vial"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                The Plant Tissue Culture Unit carries out
+                several projects involving in vitro propagation,
+                certified plant-material production
+                and research on economically important crops.
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-seedling"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                Research includes Prunus rootstocks,
+                potato seed production,
+                blackberry, Aloe vera,
+                Damask rose, olive,
+                Russian olive and caper.
+
+            </p>
+
+
+            <div class="intro-highlight">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    The unit uses modern biotechnology
+                    and tissue-culture techniques
+                    to support healthy plant propagation,
+                    crop improvement and agricultural development.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTIVITIES
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-list-check"
+                   style="margin-right:6px;"></i>
+
+                ACTIVITIES
+
+            </span>
+
+
+            <h2>
+                Research Projects
+            </h2>
+
+
+            <p>
+                The unit works on certified propagation,
+                micropropagation protocols
+                and field-evaluation studies.
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <!-- 01 -->
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    01
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+
+                <h3>
+                    Certified Prunus Rootstocks
+                </h3>
+
+
+                <p>
+                    Production and delivery
+                    of certified Prunus rootstocks
+                    using in vitro techniques
+                    to reduce pathogen transmission.
+                </p>
+
+            </article>
+
+
+
+            <!-- 02 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    02
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+
+                <h3>
+                    Certified Potato Seeds
+                </h3>
+
+
+                <p>
+                    Production of true-to-type
+                    and virus-free potato minitubers
+                    using modern technology.
+                </p>
+
+            </article>
+
+
+
+            <!-- 03 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    03
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+
+                <h3>
+                    Blackberry Micropropagation
+                </h3>
+
+
+                <p>
+                    Establishment of an in vitro
+                    vegetative micropropagation protocol
+                    for <em>Rubus fruticosus</em>.
+                </p>
+
+            </article>
+
+
+
+            <!-- 04 -->
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    04
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+
+                <h3>
+                    Blackberry Irrigation Trials
+                </h3>
+
+
+                <p>
+                    Evaluation of different irrigation regimes
+                    on growth, development
+                    and production of blackberry.
+                </p>
+
+            </article>
+
+
+
+            <!-- 05 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    05
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+
+
+                <h3>
+                    Aloe Vera Micropropagation
+                </h3>
+
+
+                <p>
+                    Development of an efficient protocol
+                    for Aloe vera micropropagation
+                    using direct and indirect regeneration.
+                </p>
+
+            </article>
+
+
+
+            <!-- 06 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    06
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+
+                <h3>
+                    Damask Rose
+                </h3>
+
+
+                <p>
+                    In vitro propagation
+                    of a Lebanese ecotype
+                    of <em>Rosa damascena</em>.
+                </p>
+
+            </article>
+
+
+
+            <!-- 07 -->
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    07
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+
+                <h3>
+                    Lebanese Olive Ecotypes
+                </h3>
+
+
+                <p>
+                    Methodological development
+                    for in vitro propagation
+                    of local Lebanese olive ecotypes.
+                </p>
+
+            </article>
+
+
+
+            <!-- 08 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    08
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+
+                <h3>
+                    Russian Olive
+                </h3>
+
+
+                <p>
+                    Development of an in vitro
+                    propagation protocol
+                    for <em>Elaeagnus angustifolia</em>.
+                </p>
+
+            </article>
+
+
+
+            <!-- 09 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    09
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+
+                <h3>
+                    Caper Micropropagation
+                </h3>
+
+
+                <p>
+                    Development of rapid
+                    in vitro propagation procedures
+                    for Lebanese caper ecotypes.
+                </p>
+
+            </article>
+
+
+
+            <!-- 10 -->
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    10
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+
+
+                <h3>
+                    Caper Irrigation Trials
+                </h3>
+
+
+                <p>
+                    Evaluation of irrigation regimes
+                    and drought effects
+                    on <em>Capparis spinosa</em>.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH FOCUS
+===================================================== -->
+
+<section class="impact-section">
+
+    <div class="container">
+
+
+        <div class="impact-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-microscope"
+                   style="margin-right:6px;"></i>
+
+                RESEARCH FOCUS
+
+            </span>
+
+
+            <h2>
+                Biotechnology Applications
+            </h2>
+
+
+            <p>
+                Research combines tissue culture,
+                crop health, propagation
+                and adaptation studies.
+            </p>
+
+        </div>
+
+
+
+        <div class="impact-grid">
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-dna"></i>
+                </div>
+
+                <h3>
+                    In Vitro Culture
+                </h3>
+
+                <p>
+                    Propagation of plant material
+                    under controlled laboratory conditions.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>
+                    Plant Health
+                </h3>
+
+                <p>
+                    Reducing transmission
+                    of pathogens during propagation.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <h3>
+                    Mass Propagation
+                </h3>
+
+                <p>
+                    Supporting production
+                    of uniform and healthy plants.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+
+                <h3>
+                    Irrigation Research
+                </h3>
+
+                <p>
+                    Evaluating water-management effects
+                    on selected crops.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STAFF
+===================================================== -->
+
+<section class="staff-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-users"
+                   style="margin-right:6px;"></i>
+
+                OUR TEAM
+
+            </span>
+
+
+            <h2>
+                Staff
+            </h2>
+
+
+            <p>
+                Meet the Plant Tissue Culture Unit team.
+            </p>
+
+        </div>
+
+
+
+        <div class="staff-grid">
+
+
+            <!-- AHMAD -->
+
+            <div class="staff-card staff-head">
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+                        <i class="fa-solid fa-star"
+                           style="margin-right:5px;"></i>
+
+                        HEAD OF UNIT
+                    </span>
+
+                    <h3>
+                        Ahmad Elbitar
+                    </h3>
+
+                    <p>
+                        Research Assistant &
+                        Head of Plant Tissue Culture Unit
+                    </p>
+
+                    <a href="mailto:abitar@lari.gov.lb">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        abitar@lari.gov.lb
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+                        AGRICULTURAL TECHNICIAN
+                    </span>
+
+                    <h3>
+                        Lamia Hassan Kassem
+                    </h3>
+
+                    <p>
+                        Agricultural Technician
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+                        AGRICULTURAL TECHNICIAN
+                    </span>
+
+                    <h3>
+                        Suzan Albourjy
+                    </h3>
+
+                    <p>
+                        Agricultural Technician
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+                        AGRICULTURAL TECHNICIAN
+                    </span>
+
+                    <h3>
+                        Nour Mahdy
+                    </h3>
+
+                    <p>
+                        Agricultural Technician
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+                        AGRICULTURAL TECHNICIAN
+                    </span>
+
+                    <h3>
+                        Mayssaa Fouani
+                    </h3>
+
+                    <p>
+                        Agricultural Technician
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+                        AGRICULTURAL TECHNICIAN
+                    </span>
+
+                    <h3>
+                        Abbas Seif Eddine
+                    </h3>
+
+                    <p>
+                        Agricultural Technician
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PUBLICATIONS
+===================================================== -->
+
+<section class="publications-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-book-open"
+                   style="margin-right:6px;"></i>
+
+                SCIENTIFIC OUTPUT
+
+            </span>
+
+
+            <h2>
+                Publications
+            </h2>
+
+
+            <p>
+                The latest three publications
+                appear first.
+                Click the button to view the rest.
+            </p>
+
+        </div>
+
+
+
+        <div class="publications-list">
+
+
+            <!-- LATEST 1 -->
+
+            <article class="publication">
+
+                <span class="publication-year">
+                    2018
+                </span>
+
+                <div>
+
+                    <h3>
+                        Droughts and Agriculture in Lebanon:
+                        Causes, Consequences and Risk Management
+                    </h3>
+
+                    <p>
+                        Dorte Verner, Maximillian Ashwill,
+                        Jens Christensen, Rachael Mcdonnell,
+                        John Redwood, Ihab Jomaa,
+                        Maurice Saade, Randa Massad,
+                        Ali Chehade, Ahmad Bitar
+                        and David Treguer.
+                        World Bank Group Report.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- LATEST 2 -->
+
+            <article class="publication">
+
+                <span class="publication-year">
+                    2017
+                </span>
+
+                <div>
+
+                    <h3>
+                        Crops and Plants Adapted
+                        to El Niño and Climate Change
+                    </h3>
+
+                    <p>
+                        Chehade Ali and Ahmad Bitar.
+                        Background paper for
+                        the Cures, Causes,
+                        and Consequences of Drought
+                        in Agricultural Lebanon.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- LATEST 3 -->
+
+            <article class="publication">
+
+                <span class="publication-year">
+                    2016
+                </span>
+
+                <div>
+
+                    <h3>
+                        In Situ Evaluation of the Fruit
+                        and Oil Characteristics
+                        of the Main Lebanese Olive Germplasm
+                    </h3>
+
+                    <p>
+                        Chehade A., El Bitar A.,
+                        Kadri A., Choueiri E.,
+                        Nabbout R., Youssef H.,
+                        Samaha M., Awada A.
+                        and Famiani F.
+                        Science of Food and Agriculture.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- MORE PUBLICATIONS -->
+
+            <div id="morePublications"
+                 style="display:none;">
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2015
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Removal of Viruses
+                            from Lebanese Fig Varieties
+                            Using Tissue Culture
+                            and Thermotherapy
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbeaino T.,
+                            Elbitar A., Tala Fattal T.
+                            and Elia Choueiri E.
+                            Phytopathologia Mediterranea,
+                            54(3), 531-535.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2014
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Diversity of Wild Prunus
+                            in the Bekaa Province, Lebanon
+                        </h3>
+
+                        <p>
+                            Chalak L., El Bitar A.
+                            and Chehade A.
+                            Acta Horticulturae 1032.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2014
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            In Vitro Plant Regeneration System
+                            for Two Middle East Cultivars
+                            of Chickpea
+                        </h3>
+
+                        <p>
+                            Kadri A., Chalak L.,
+                            El Bitar A., Nicolas N.,
+                            Mroué S.,
+                            Grenier De March G.
+                            Advances in Crop Science
+                            and Technology 2:125.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2013
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Elimination of Grapevine
+                            Bois Noir Phytoplasma
+                            by Tissue Culture
+                        </h3>
+
+                        <p>
+                            Chalak L., El Bitar A.,
+                            Mourad N., Mortada C.
+                            and Choueiri E.
+                            Advances in Crop Science
+                            and Technology.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2009
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Attempts to Virus-Free Production
+                            of Lebanese Fig Varieties
+                            by Tissue Culture
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbeaino T.,
+                            Elbitar A., Chehade A.,
+                            Fattal T., Choueri E.
+                            Fourth International Symposium on Fig.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2009
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Genetic Structure
+                            of Spontaneous and Cultivated Fig
+                            in Lebanon
+                        </h3>
+
+                        <p>
+                            Chalak L., Achtak H.,
+                            Chehade A., Elbitar A.,
+                            Santoni S. and Khadari B.
+                            Fourth International Symposium on Fig.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2007
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Phenotypic Diversity
+                            and Morphological Characterization
+                            of Capparis spinosa L. in Lebanon
+                        </h3>
+
+                        <p>
+                            Chalak L., Perin A.,
+                            Elbitar A., Chehade A.
+                            Biologia Tunisie.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2007
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Assainissement de Variétés
+                            de Prunus Infectées
+                            par Prunus Necrotic Ringspot Virus
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbitar A.,
+                            Chehade T., El Zammar S.,
+                            Jreijiri F., Choueiri E.
+                            Lebanese Science Journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2006
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Micropropagation of
+                            Capparis spinosa L.
+                            subsp. rupestris
+                        </h3>
+
+                        <p>
+                            Chalak L. and Elbitar A.
+                            Indian Journal of Biotechnology.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2006
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Morphological and Molecular Characterization
+                            of Peach Accessions
+                            Cultivated in Lebanon
+                        </h3>
+
+                        <p>
+                            Chalak L., Chehade A.,
+                            Elbitar A., Cosson P.,
+                            Zanetto A., Laigret F.,
+                            Dirlewanger E.
+                            Lebanese Science Journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2005
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Caractérisation Morphologique
+                            et Moléculaire de Clones
+                            de Cerisier Cultivés au Liban
+                        </h3>
+
+                        <p>
+                            Chehade A., Chalak L.,
+                            Elbitar A., Cosson P.,
+                            Zanetto A., Dirlewanger E.
+                            Lebanese Science Journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2005
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Propagation In Vitro
+                            de Deux Variétés Hybrides
+                            de Lilium Asiatique
+                        </h3>
+
+                        <p>
+                            Tannouri M., Elbitar A.,
+                            Chehade A., Chalak L.
+                            Lebanese Science Journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2005
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Attempts to Eliminate
+                            Candidatus Phytoplasma Phoenicium
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbitar A.,
+                            Rizk R., Choueiri E.,
+                            Salar P., Bové JM.
+                            European Journal of Plant Pathology.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2004
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Assainissement de la Pomme de Terre
+                            Infectée par le Virus PVY NTN
+                            par Culture de Méristèmes
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbitar A.,
+                            Masaad W., Choueiri E.
+                            Lebanese Science Journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2003
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Potentiel d'Enracinement
+                            In Vivo et In Vitro
+                            de Variétés Libanaises d'Amandier
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbitar A.,
+                            Chehade A., Chamoun W.
+                            Lebanese Science Journal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2003
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            In Vitro Propagation
+                            of Capparis spinosa L.
+                        </h3>
+
+                        <p>
+                            Chalak L., Elbitar A.,
+                            Cordahi N., Hage C.
+                            and Chehade A.
+                            Acta Horticulturae 616.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2001
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Caractérisation Morphologique
+                            de la Diversité du Genre Prunus
+                            dans la Plaine de la Békaa
+                        </h3>
+
+                        <p>
+                            Chehade A.,
+                            Elbitar A.,
+                            Chalak L.
+                            Magon 1:4-17.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- SHOW MORE BUTTON -->
+
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                margin-top:40px;
+            ">
+
+                <button
+                    type="button"
+                    id="showMorePublications"
+                    aria-expanded="false"
+                    style="
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:10px;
+                        padding:14px 30px;
+                        border:none;
+                        border-radius:30px;
+                        background:#68752d;
+                        color:#ffffff;
+                        font-family:Arial, Helvetica, sans-serif;
+                        font-size:14px;
+                        font-weight:600;
+                        cursor:pointer;
+                        box-shadow:
+                            0 8px 20px
+                            rgba(55,72,30,0.18);
+                    ">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span id="publicationButtonText">
+                        Show More Publications
+                    </span>
+
+                    <i id="publicationButtonIcon"
+                       class="fa-solid fa-chevron-down"
+                       style="
+                           font-size:11px;
+                           transition:transform 0.3s ease;
+                       ">
+                    </i>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="research-cta">
+
+    <div class="container">
+
+
+        <div class="cta-icon">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+
+
+        <h2>
+            Explore Tal Amara Station
+        </h2>
+
+
+        <p>
+            Discover the other specialized
+            laboratories and research units
+            available at Tal Amara Station.
+        </p>
+
+
+        <a href="tel-amara.html"
+           class="cta-button">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Tal Amara Station
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="research-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h3>
+
+                <i class="fa-solid fa-seedling"
+                   style="margin-right:7px;"></i>
+
+                LARI
+
+            </h3>
+
+
+            <p>
+                Lebanese Agricultural Research Institute
+            </p>
+
+        </div>
+
+
+
+        
+
+    <div class="footer-container">
+
+
+
+        <!-- CONTACT + SOCIAL MEDIA -->
+        <div class="footer-links" style="margin-left: auto;">
+
+            <!-- LOCATION -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Tal+Amara+Bekaa+Lebanon"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-solid fa-location-dot"></i>
+                Bekaa - Tal Amara
+
+            </a>
+
+
+            <!-- PHONE -->
+            <a href="tel:+96108900047">
+
+                <i class="fa-solid fa-phone"></i>
+                +961 08 900 047
+
+            </a>
+
+            
+             <!-- LINKEDIN -->
+            <a href="YOUR_LINKEDIN_LINK"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/share/1BhZGqhteZ/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/leb_agricultural_institute?igsh=ZHFiNzBqemh6cHV4"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            <i class="fa-regular fa-copyright"></i>
+
+            2026 Lebanese Agricultural Research Institute.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       STATIONS DROPDOWN
+    ===================================================== */
+
+    const dropdown =
+        document.querySelector(".dropdown");
+
+    const dropdownToggle =
+        document.querySelector(".dropdown-toggle");
+
+
+    if (dropdown && dropdownToggle) {
+
+        dropdownToggle.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                event.stopPropagation();
+
+                dropdown.classList.toggle("open");
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (!dropdown.contains(event.target)) {
+
+                    dropdown.classList.remove("open");
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       PUBLICATIONS SHOW MORE
+    ===================================================== */
+
+    const button =
+        document.getElementById("showMorePublications");
+
+    const publications =
+        document.getElementById("morePublications");
+
+    const buttonText =
+        document.getElementById("publicationButtonText");
+
+    const buttonIcon =
+        document.getElementById("publicationButtonIcon");
+
+
+    if (
+        button &&
+        publications &&
+        buttonText &&
+        buttonIcon
+    ) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const isHidden =
+                    publications.style.display === "none";
+
+
+                if (isHidden) {
+
+                    publications.style.display = "block";
+
+                    buttonText.textContent =
+                        "Show Less Publications";
+
+                    buttonIcon.style.transform =
+                        "rotate(180deg)";
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                }
+
+                else {
+
+                    publications.style.display = "none";
+
+                    buttonText.textContent =
+                        "Show More Publications";
+
+                    buttonIcon.style.transform =
+                        "rotate(0deg)";
+
+                    button.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

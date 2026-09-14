@@ -1,0 +1,2876 @@
+/* =========================================================
+   LARI WEBSITE - MAIN STYLESHEET
+   Color Palette:
+   Olive Green: #667A3E
+   Dark Olive:  #4F6230
+   Brown:      #795548
+   Dark Brown: #4A3728
+   Cream:      #F7F5EF
+   White:      #FFFFFF
+   Light Green:#EEF2E6
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL VARIABLES
+========================================================= */
+
+:root {
+    --olive: #667A3E;
+    --olive-dark: #4F6230;
+    --olive-light: #EEF2E6;
+
+    --brown: #795548;
+    --brown-dark: #4A3728;
+    --brown-light: #A98268;
+
+    --white: #FFFFFF;
+    --cream: #F7F5EF;
+    --light-gray: #F3F3F0;
+    --gray: #777777;
+    --dark: #26301F;
+
+    --border: #E2E4DA;
+
+    --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.14);
+
+    --transition: all 0.3s ease;
+
+    --container-width: 1200px;
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(92%, var(--container-width));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   3. TOP BAR
+========================================================= */
+
+
+/* =========================================================
+   4. MAIN HEADER
+========================================================= */
+
+
+/* =========================================================
+   5. LOGO
+========================================================= */
+
+
+/* =========================================================
+   6. NAVIGATION
+========================================================= */
+
+
+/* =========================================================
+   7. DROPDOWN MENU
+========================================================= */
+
+
+/* =========================================================
+   8. HEADER ACTIONS
+========================================================= */
+
+
+/* =========================================================
+   WEATHER DROPDOWN
+========================================================= */
+
+
+/* Weather Mobile */
+
+
+/* =========================================================
+   9. MOBILE MENU BUTTON
+========================================================= */
+
+
+/* =========================================================
+   10. HERO SECTION
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("../images/lari-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(38, 55, 35, 0.94) 0%,
+        rgba(55, 73, 47, 0.88) 38%,
+        rgba(76, 91, 58, 0.65) 68%,
+        rgba(92, 103, 70, 0.35) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 100px 0;
+}
+
+.hero-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #D8E3B9;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #C9D89E;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #F4F4EF;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   11. BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--olive);
+
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--olive-dark);
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   12. QUICK ACCESS
+========================================================= */
+
+.quick-access {
+    position: relative;
+
+    z-index: 10;
+
+    margin-top: -45px;
+}
+
+.quick-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: var(--white);
+
+    border-radius: 8px;
+
+    box-shadow: var(--shadow-lg);
+
+    overflow: hidden;
+}
+
+.quick-card {
+    position: relative;
+
+    min-height: 180px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right: 1px solid var(--border);
+
+    transition: var(--transition);
+}
+
+.quick-card:last-child {
+    border-right: none;
+}
+
+.quick-card:hover {
+    background-color: var(--olive-light);
+}
+
+
+.quick-card h3 {
+    color: var(--dark);
+
+    font-size: 18px;
+
+    margin-top: 18px;
+}
+
+.quick-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-top: 7px;
+}
+
+.quick-card .arrow {
+    position: absolute;
+
+    right: 25px;
+    bottom: 25px;
+
+    color: var(--brown);
+
+    transition: var(--transition);
+}
+
+.quick-card:hover .arrow {
+    transform: translateX(5px);
+
+    color: var(--olive);
+}
+
+
+/* =========================================================
+   13. COMMON SECTION STYLES
+========================================================= */
+
+.about-section,
+.research-section,
+.news-section {
+    padding: 100px 0;
+}
+
+.about-section {
+    background-color: var(--white);
+}
+
+.research-section,
+.news-section {
+    background-color: var(--cream);
+}
+
+
+/* =========================================================
+   14. SECTION HEADER
+========================================================= */
+
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+.section-header.centered {
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--olive);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-label::before {
+    content: "";
+
+    width: 30px;
+    height: 2px;
+
+    margin-right: 8px;
+
+    background-color: var(--brown);
+}
+
+.section-header.centered .section-label::before {
+    display: none;
+}
+
+.section-header h2 {
+    color: var(--dark);
+
+    font-size: clamp(30px, 4vw, 44px);
+
+    line-height: 1.15;
+}
+
+.section-header h2 span {
+    color: var(--olive);
+}
+
+.section-header p {
+    color: var(--gray);
+
+    line-height: 1.8;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   15. SECTION TITLE GROUP
+========================================================= */
+
+
+/* =========================================================
+   16. VIEW ALL LINKS
+========================================================= */
+
+.view-all,
+.text-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--olive-dark);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: var(--transition);
+}
+
+.view-all:hover,
+.text-link:hover {
+    color: var(--brown);
+}
+
+.view-all i,
+.text-link i {
+    transition: var(--transition);
+}
+
+.view-all:hover i,
+.text-link:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   17. ABOUT SECTION
+========================================================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 18px;
+    left: 18px;
+
+    border: 3px solid var(--brown);
+
+    z-index: 0;
+}
+
+.about-image img {
+    position: relative;
+
+    z-index: 1;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.about-content p {
+    color: var(--gray);
+
+    margin: 20px 0;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   18. RESEARCH CARDS
+========================================================= */
+
+.research-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.research-card {
+    background-color: var(--white);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.research-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-md);
+}
+
+.research-image {
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.research-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.research-card:hover .research-image img {
+    transform: scale(1.08);
+}
+
+.research-content {
+    padding: 25px;
+}
+
+.research-content > span {
+    color: var(--brown);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+.research-content h3 {
+    color: var(--dark);
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    margin: 10px 0;
+}
+
+.research-content p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.research-content a {
+    color: var(--olive);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    transition: var(--transition);
+}
+
+.research-content a:hover {
+    color: var(--brown);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   19. SERVICES
+========================================================= */
+
+
+/* =========================================================
+   20. NEWS
+========================================================= */
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.news-card {
+    background-color: var(--white);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-md);
+}
+
+.news-card > img {
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-date {
+    color: var(--brown);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.news-content h3 {
+    color: var(--dark);
+
+    font-size: 19px;
+
+    line-height: 1.35;
+
+    margin: 10px 0;
+}
+
+.news-content p {
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 17px;
+}
+
+.news-content a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--olive);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.news-content a:hover {
+    color: var(--brown);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   21. FOOTER
+========================================================= */
+
+.footer {
+    background-color: var(--brown-dark);
+
+    color: var(--white);
+}
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+
+    gap: 55px;
+
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    max-width: 340px;
+
+    color: #D8D3CE;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   22. SOCIAL LINKS
+========================================================= */
+
+.social-links {
+    display: flex;
+
+    gap: 10px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 50%;
+
+    color: var(--white);
+
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--olive);
+
+    border-color: var(--olive);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   23. FOOTER COLUMNS
+========================================================= */
+
+.footer-column h3 {
+    color: var(--white);
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+
+    position: relative;
+}
+
+.footer-column h3::after {
+    content: "";
+
+    display: block;
+
+    width: 30px;
+    height: 2px;
+
+    margin-top: 8px;
+
+    background-color: var(--olive);
+}
+
+.footer-column ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-column ul li a {
+    color: #D8D3CE;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+.footer-column ul li a:hover {
+    color: #C6D59A;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   24. FOOTER CONTACT
+========================================================= */
+
+.footer-contact p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #D8D3CE;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.footer-contact p i {
+    width: 18px;
+
+    margin-top: 4px;
+
+    color: #C6D59A;
+}
+
+
+/* =========================================================
+   25. FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom-content {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #BDB7B1;
+
+    font-size: 12px;
+}
+
+.footer-bottom-content > div {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-bottom a {
+    color: #BDB7B1;
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+.footer-bottom a:hover {
+    color: #C6D59A;
+}
+
+
+/* =========================================================
+   26. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+
+    .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-card:nth-child(2) {
+        border-right: none;
+    }
+
+    .quick-card:nth-child(1),
+    .quick-card:nth-child(2) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    
+
+    .footer-main {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+
+    .footer-contact {
+        grid-column: span 3;
+    }
+}
+
+
+/* =========================================================
+   27. RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .quick-access {
+        margin-top: -30px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .research-grid,
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-image,
+    .news-card > img {
+        height: 250px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .section-header.centered {
+        align-items: center;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-contact {
+        grid-column: span 2;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 20px 0;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   28. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .hero {
+        min-height: 550px;
+
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .hero-label {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-card {
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .quick-card:last-child {
+        border-bottom: none;
+    }
+
+    .about-section,
+.research-section,
+.news-section {
+        padding: 70px 0;
+    }
+
+    .about-image::after {
+        display: none;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    
+
+    .research-image,
+    .news-card > img {
+        height: 220px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .footer-contact {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   29. ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #B7C985;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   30. SELECTION COLOR
+========================================================= */
+
+::selection {
+    background-color: var(--olive);
+
+    color: var(--white);
+}
+
+/* =====================================================
+   HEADER PHOTO FLIP
+===================================================== */
+
+
+/* =====================================================
+   FRONT & BACK OF PHOTO
+===================================================== */
+
+
+/* =====================================================
+   PHOTO IMAGES
+===================================================== */
+
+
+/* =====================================================
+   BACK PHOTO
+===================================================== */
+
+
+/* =====================================================
+   3D FLIP ANIMATION
+===================================================== */
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+
+/* =====================================================
+   FLIPPING HEADER PROFILE
+===================================================== */
+
+
+/* =====================================================
+   INNER FLIPPING CONTAINER
+===================================================== */
+
+
+/* =====================================================
+   FRONT & BACK
+===================================================== */
+
+
+/* =====================================================
+   LARI LOGO & DR. JAD IMAGE
+===================================================== */
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+
+/* Main name */
+
+
+/* Subtitle */
+
+
+/* =====================================================
+   BACK SIDE
+===================================================== */
+
+
+/* =====================================================
+   6-SECOND FLIP ANIMATION
+===================================================== */
+
+
+/* =====================================================
+   PROFILE RESPONSIVE
+===================================================== */
+
+
+/* =========================================================
+   LANGUAGE SWITCHER
+========================================================= */
+
+
+/* =========================================================
+   RTL / ARABIC SPECIFIC STYLES
+========================================================= */
+
+html[dir="rtl"] body {
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    text-align: right;
+}
+
+
+html[dir="rtl"] .quick-card {
+    border-right: none;
+
+    border-left: 1px solid var(--border);
+}
+
+
+html[dir="rtl"] .quick-card:last-child {
+    border-left: none;
+}
+
+
+html[dir="rtl"] .quick-card .arrow {
+    margin-left: 0;
+
+    margin-right: auto;
+
+    transform: scaleX(-1);
+}
+
+
+html[dir="rtl"] .quick-card:hover .arrow {
+    transform: scaleX(-1) translateX(5px);
+}
+
+
+html[dir="rtl"] .about-image::after {
+    left: auto;
+
+    right: 18px;
+}
+
+
+html[dir="rtl"] .section-label::before {
+    margin-right: 0;
+
+    margin-left: 8px;
+}
+
+
+/* =========================================================
+   PARTNERS & ORGANIZATIONS SECTION
+========================================================= */
+
+.partners-section {
+    padding: 80px 0;
+
+    background-color: var(--bg-light, #f8f9fa);
+}
+
+
+/* =========================================================
+   PARTNERS GRID
+   6 ORGANIZATIONS ON ONE LINE
+========================================================= */
+
+.partners-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap: 24px;
+
+    margin-top: 40px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   PARTNER CARD
+========================================================= */
+
+.partner-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    width: 100%;
+
+    min-width: 0;
+
+    transition: transform 0.3s ease;
+}
+
+
+.partner-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   PARTNER IMAGE WRAPPER
+========================================================= */
+
+.partner-img-wrapper {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background-color: #ffffff;
+
+    border: 1px solid #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Make link fill the circular area */
+
+.partner-img-wrapper a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* Hover */
+
+.partner-card:hover .partner-img-wrapper {
+
+    border-color:
+        var(--olive, #556b2f);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PARTNER LOGO
+========================================================= */
+
+.partner-img-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 10%;
+
+    transition: transform 0.3s ease;
+}
+
+
+.partner-card:hover .partner-img-wrapper img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   PARTNER NAME
+========================================================= */
+
+.partner-card h3 {
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color:
+        var(--text-dark, #222);
+
+    margin-top: 15px;
+
+    margin-bottom: 4px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   PARTNER DESCRIPTION
+========================================================= */
+
+.partner-card span {
+
+    display: block;
+
+    font-size: 0.78rem;
+
+    color:
+        var(--text-muted, #666);
+
+    line-height: 1.45;
+
+    max-width: 160px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   PARTNERS RTL SUPPORT
+========================================================= */
+
+html[dir="rtl"] .partner-card h3 {
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+
+/* =========================================================
+   PARTNERS TABLET
+   3 ORGANIZATIONS PER ROW
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .partners-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 35px 25px;
+    }
+
+
+    .partner-img-wrapper {
+        width: 125px;
+
+        height: 125px;
+    }
+
+}
+
+
+/* =========================================================
+   PARTNERS SMALL TABLET
+   2 ORGANIZATIONS PER ROW
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .partners-section {
+        padding: 65px 0;
+    }
+
+
+    .partners-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 35px 20px;
+
+        margin-top: 30px;
+    }
+
+
+    .partner-img-wrapper {
+        width: 120px;
+
+        height: 120px;
+    }
+
+}
+
+
+/* =========================================================
+   PARTNERS SMALL MOBILE
+   1 ORGANIZATION PER ROW
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .partner-img-wrapper {
+        width: 130px;
+
+        height: 130px;
+    }
+
+
+    .partner-card span {
+        max-width: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   LARI APP DOWNLOAD SECTION
+   FIXED BASE STYLES
+========================================================= */
+
+.app-section {
+
+    width: 100%;
+
+    padding: 90px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f5ed 0%,
+            #e8ebdc 50%,
+            #dde3cf 100%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Decorative background circle */
+
+.app-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(107, 122, 47, 0.08);
+
+    top: -150px;
+
+    right: -100px;
+}
+
+
+.app-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(107, 122, 47, 0.06);
+
+    bottom: -120px;
+
+    left: -80px;
+}
+
+
+/* =========================================================
+   APP CONTENT
+========================================================= */
+
+.app-content {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   APP TEXT
+========================================================= */
+
+.app-text {
+
+    flex: 1;
+
+    min-width: 0;
+
+    max-width: 700px;
+}
+
+
+.app-label {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #6b7a2f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+
+.app-text h2 {
+
+    margin: 0 0 20px;
+
+    color: #39421d;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.app-text p {
+
+    max-width: 650px;
+
+    margin: 0 0 32px;
+
+    color: #606654;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   APP STORE BUTTONS
+========================================================= */
+
+.app-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.app-store-btn {
+
+    min-width: 195px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    padding: 13px 20px;
+
+    background: #4f5f24;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    border: 1px solid #4f5f24;
+
+    box-shadow:
+        0 7px 18px
+        rgba(63, 75, 29, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.app-store-btn:hover {
+
+    background: #687a2e;
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(63, 75, 29, 0.25);
+}
+
+
+.app-store-btn i {
+
+    width: 35px;
+
+    font-size: 32px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+.app-store-btn div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.2;
+
+    text-align: left;
+}
+
+
+.app-store-btn small {
+
+    margin-bottom: 3px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.4px;
+
+    opacity: 0.9;
+}
+
+
+.app-store-btn strong {
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PHONE ICON
+========================================================= */
+
+.app-icon {
+
+    width: 230px;
+
+    height: 230px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 8px solid #d8ddc5;
+
+    box-shadow:
+        0 20px 45px
+        rgba(63, 75, 29, 0.15),
+        inset 0 0 0 1px
+        rgba(107, 122, 47, 0.08);
+
+    position: relative;
+}
+
+
+/* Small decorative circle */
+
+.app-icon::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #87964b;
+
+    top: 15px;
+
+    right: 25px;
+}
+
+
+/* Phone icon */
+
+.app-icon i {
+
+    font-size: 95px;
+
+    color: #5c6c29;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.app-icon:hover i {
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   APP TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .app-section {
+
+        padding: 70px 6%;
+    }
+
+
+    .app-content {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 35px;
+    }
+
+
+    .app-text {
+
+        width: 100%;
+
+        max-width: 700px;
+    }
+
+
+    .app-text p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .app-buttons {
+
+        justify-content: center;
+    }
+
+
+    .app-icon {
+
+        width: 180px;
+
+        height: 180px;
+
+        /*
+           Puts the phone icon above
+           the text on tablet/mobile.
+        */
+
+        order: -1;
+    }
+
+
+    .app-icon i {
+
+        font-size: 72px;
+    }
+
+}
+
+
+/* =========================================================
+   APP MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .app-section {
+
+        padding: 55px 20px;
+    }
+
+
+    .app-content {
+
+        gap: 28px;
+    }
+
+
+    .app-text {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .app-label {
+
+        font-size: 10px;
+
+        letter-spacing: 1.7px;
+    }
+
+
+    .app-text h2 {
+
+        font-size: 28px;
+
+        line-height: 1.25;
+
+        margin-bottom: 16px;
+    }
+
+
+    .app-text p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin-bottom: 26px;
+    }
+
+
+    .app-buttons {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+
+    .app-store-btn {
+
+        width: min(100%, 270px);
+
+        min-width: 0;
+
+        max-width: 270px;
+
+        padding: 12px 18px;
+
+        justify-content: flex-start;
+    }
+
+
+    .app-store-btn i {
+
+        font-size: 28px;
+    }
+
+
+    .app-store-btn strong {
+
+        font-size: 17px;
+    }
+
+
+    .app-icon {
+
+        width: 145px;
+
+        height: 145px;
+
+        border-width: 6px;
+    }
+
+
+    .app-icon i {
+
+        font-size: 58px;
+    }
+
+
+    .app-icon::before {
+
+        width: 16px;
+
+        height: 16px;
+
+        top: 10px;
+
+        right: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   APP VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .app-section {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+    }
+
+
+    .app-text h2 {
+
+        font-size: 25px;
+    }
+
+
+    .app-store-btn {
+
+        max-width: 100%;
+    }
+
+
+    .app-icon {
+
+        width: 130px;
+
+        height: 130px;
+    }
+
+
+    .app-icon i {
+
+        font-size: 52px;
+    }
+
+}
+/* =====================================================
+   HERO SIDE-BY-SIDE & 3D MAP STYLING
+===================================================== */
+
+
+.hero-text-col {
+    flex: 1 1 50% !important;
+
+    max-width: 50% !important;
+}
+
+
+/* =========================================
+   HERO MAP - BIGGER + SLIGHTLY HIGHER
+========================================= */
+
+
+/* =====================================================
+   MAP CARD
+===================================================== */
+
+.map-3d-card {
+    position: relative;
+
+    /* Make map wider */
+    width: 115%;
+
+    /* Make map taller */
+    height: 490px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(55, 73, 47, 0.25);
+
+    border:
+        1px solid
+        rgba(220, 225, 190, 0.35);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.28);
+
+    transform:
+        rotateY(-6deg)
+        rotateX(3deg);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   MAP HOVER
+===================================================== */
+
+.map-3d-card:hover {
+    transform:
+        rotateY(0deg)
+        rotateX(0deg)
+        scale(1.01);
+
+    box-shadow:
+        0 25px 50px
+        rgba(0, 0, 0, 0.32);
+}
+
+
+/* =====================================================
+   ACTUAL MAP
+===================================================== */
+
+#hero-map-3d {
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   MAP TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+
+    .hero-text-col {
+        max-width: 100% !important;
+
+        width: 100% !important;
+    }
+
+
+    .map-3d-card {
+        width: 100%;
+
+        height: 380px;
+
+        transform: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   MAP MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .map-3d-card {
+        width: 100%;
+
+        height: 320px;
+
+        border-radius: 14px;
+
+        transform: none !important;
+    }
+
+}
+
+
+/* =====================================================
+   MAP TAG
+===================================================== */
+
+.map-tag {
+    position: absolute;
+
+    top: 14px;
+
+    left: 14px;
+
+    background:
+        rgba(54, 72, 46, 0.92);
+
+    color: #F4F1E6;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    z-index: 10;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.20);
+}
+
+
+/* =====================================================
+   STATION MARKER PINS
+===================================================== */
+
+.station-pin {
+    width: 28px;
+
+    height: 28px;
+
+    background-color: #2d6a4f;
+
+    color: white;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px
+        rgba(0, 0, 0, 0.4);
+
+    font-size: 24px;
+
+    transition: transform 0.2s;
+}
+
+
+.station-pin:hover {
+    transform: scale(1.3);
+
+    background-color: #52b788;
+}
+
+
+/* =====================================================
+   MAP POPUP ANIMATION
+===================================================== */
+
+.maplibregl-popup-content {
+    animation:
+        popupFade
+        0.2s
+        ease-out
+        forwards;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+@keyframes popupFade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION - FIXED
+========================================================= */
+
+
+/* =========================================================
+   RTL MOBILE NAVIGATION
+========================================================= */
+
+
+/* =========================================================
+   EXTRA SMALL HEADER FIX
+========================================================= */
+
+
+
+/* =========================================================
+   FINAL LARI OLIVE PALETTE + HERO FIX
+   Desktop:
+   - Institute name: one line
+   - Main heading: exactly two lines
+   - Description: approximately two lines
+========================================================= */
+
+:root {
+    --olive: #6F7F3B;
+    --olive-dark: #3F4F24;
+    --olive-light: #F0F3E5;
+
+    --brown: #75634D;
+    --brown-dark: #303A22;
+    --brown-light: #A5967D;
+
+    --white: #FFFFFF;
+    --cream: #F8F7F0;
+    --light-gray: #F3F4EC;
+    --gray: #6C7164;
+    --dark: #27301E;
+
+    --border: #DDE2CF;
+}
+
+/* Rich olive hero overlay */
+.hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(39, 48, 30, 0.96) 0%,
+        rgba(63, 79, 36, 0.92) 42%,
+        rgba(93, 109, 55, 0.72) 70%,
+        rgba(111, 127, 59, 0.42) 100%
+    );
+}
+
+/* Hero text uses the full width now that the map is separate */
+.hero-content {
+    max-width: 1200px !important;
+}
+
+.hero-text-col {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Institute name stays on one line on desktop */
+.hero-label {
+    display: block;
+    color: #E0E8C3;
+    white-space: nowrap;
+}
+
+/* Heading = exactly two lines because each span is one line */
+.hero h1 {
+    font-size: clamp(42px, 4.7vw, 64px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    white-space: normal;
+}
+
+.hero h1 span {
+    display: block !important;
+    color: #D8E5A8;
+    white-space: nowrap !important;
+}
+
+/* Description naturally sits at about two lines on desktop */
+.hero p {
+    max-width: 760px;
+    color: #F7F8F1;
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 35px;
+}
+
+.btn-primary {
+    background-color: #71823E;
+}
+
+.btn-primary:hover {
+    background-color: #4B5E2B;
+}
+
+/* Tablet */
+@media (max-width: 850px) {
+    .hero-label {
+        white-space: normal;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h1 span {
+        white-space: normal !important;
+    }
+
+    .hero p {
+        max-width: 700px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 34px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+        white-space: normal !important;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   SHARE BUTTON + SOCIAL SHARE MENU
+========================================================= */
+
+/* =========================================================
+   FINAL RESPONSIVE SAFEGUARDS
+   Added for phone/tablet compatibility
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    min-width: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe,
+canvas,
+svg {
+    max-width: 100%;
+}
+
+.container {
+    width: min(92%, var(--container-width));
+    max-width: 100%;
+}
+
+main,
+section,
+footer,
+.footer,
+.app-section,
+.partners-section,
+.map-section {
+    max-width: 100%;
+}
+
+.hero-content,
+.hero-text-col,
+.about-grid,
+.research-grid,
+.news-grid,
+.quick-grid,
+.partners-grid,
+.app-content,
+.footer-main,
+.footer-bottom-content {
+    min-width: 0;
+}
+
+.map-3d-card {
+    max-width: 100%;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 992px) {
+
+    .map-3d-card {
+        width: 100% !important;
+        max-width: 100%;
+        transform: none !important;
+    }
+
+    .hero-text-col {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ---------- PHONE / SMALL TABLET ---------- */
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100% !important;
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .hero-label {
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        overflow-wrap: anywhere;
+    }
+
+    .hero h1 span {
+        white-space: normal !important;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .quick-grid,
+    .about-grid,
+    .research-grid,
+    .news-grid,
+    .footer-main {
+        grid-template-columns: 1fr !important;
+    }
+
+    .quick-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-image,
+    .about-content,
+    .research-card,
+    .news-card,
+    .partner-card {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .section-header {
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-header.centered {
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-header h2 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .view-all,
+    .text-link {
+        white-space: normal;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .partner-card span {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .map-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .map-3d-card {
+        width: 100% !important;
+        max-width: 100%;
+        height: 320px !important;
+        border-radius: 12px;
+        transform: none !important;
+    }
+
+    .app-section {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .app-content {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .app-text {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .app-text h2,
+    .app-text p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .app-buttons {
+        width: 100%;
+    }
+
+    .app-store-btn {
+        max-width: 100%;
+    }
+
+    .footer-contact {
+        grid-column: auto !important;
+    }
+
+    .footer-bottom-content,
+    .footer-bottom-content > div {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------- SMALL PHONE ---------- */
+@media (max-width: 600px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .hero-content {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: clamp(29px, 9.5vw, 35px);
+        line-height: 1.12;
+    }
+
+    .hero-buttons,
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .about-section,
+    .research-section,
+    .news-section,
+    .partners-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        min-height: 240px;
+        max-height: 320px;
+        object-fit: cover;
+    }
+
+    .research-image,
+    .news-card > img {
+        height: 210px;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .map-3d-card {
+        height: 280px !important;
+    }
+
+    .app-section {
+        padding: 50px 16px;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .app-store-btn {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .footer-main {
+        gap: 32px;
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 0;
+    }
+
+    .footer-bottom-content > div {
+        justify-content: center;
+    }
+}
+
+/* ---------- VERY SMALL PHONE ---------- */
+@media (max-width: 420px) {
+
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero h1 {
+        font-size: clamp(27px, 9vw, 32px);
+    }
+
+    .quick-card {
+        padding: 24px 20px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+
+    .map-3d-card {
+        height: 250px !important;
+    }
+}
+

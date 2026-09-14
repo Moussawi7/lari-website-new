@@ -1,0 +1,3121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="icon.jpg">
+
+    <title>
+        Hasbaya Station | LARI
+    </title>
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- SAME CSS AS OTHER LARI PAGES -->
+
+    <link rel="stylesheet"
+          href="stations.css">
+          <!-- HEADER CSS: same as index.html and kept only inside this HTML file -->
+      <style>
+/* =========================================================
+   INDEX HEADER FOUNDATION
+   Keeps this header independent from aboutus.css
+========================================================= */
+
+.header {
+    --olive: #667A3E;
+    --olive-dark: #4F6230;
+    --olive-light: #EEF2E6;
+    --white: #FFFFFF;
+    --border: #E2E4DA;
+    --dark: #26301F;
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --transition: all 0.3s ease;
+
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header *,
+.header *::before,
+.header *::after {
+    box-sizing: border-box;
+}
+
+.header .container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header button {
+    font-family: inherit;
+}
+
+.main-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 1000;
+}.header-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}.logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}.navbar {
+    margin-left: auto;
+}.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}.nav-list > li {
+    position: relative;
+}.nav-list > li > a {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 12px 10px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}.nav-list > li > a:hover,
+.nav-list > li > a.active {
+    color: var(--olive);
+}.nav-list > li > a.active {
+    position: relative;
+}.nav-list > li > a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 2px;
+
+    height: 2px;
+
+    background-color: var(--olive);
+}.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    left: 0;
+
+    min-width: 220px;
+
+    background-color: var(--white);
+
+    border-top: 3px solid var(--olive);
+
+    box-shadow: var(--shadow-md);
+
+    border-radius: 0 0 8px 8px;
+
+    padding: 8px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: var(--transition);
+}.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}.dropdown-menu li a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}.dropdown-menu li a:hover {
+    background-color: var(--olive-light);
+
+    color: var(--olive-dark);
+
+    padding-left: 23px;
+}.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}.search-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--white);
+
+    border-radius: 50%;
+
+    color: var(--olive-dark);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}.search-btn:hover {
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-color: var(--olive);
+}.mobile-menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}@media (max-width: 1100px) {.nav-list {
+        gap: 0;
+    }.nav-list > li > a {
+        padding: 10px 7px;
+
+        font-size: 13px;
+    }}@media (max-width: 850px) {.header-content {
+        min-height: 75px;
+    }.logo img {
+        width: 52px;
+        height: 52px;
+    }.navbar {
+        display: none;
+    }.header-actions {
+        margin-left: auto;
+    }.mobile-menu-btn {
+        display: block;
+    }}@media (max-width: 600px) {.header-actions {
+        gap: 6px;
+    }.search-btn,
+    .mobile-menu-btn {
+        width: 38px;
+        height: 38px;
+    }}.profile-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}.profile-title {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1f6b45;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}.profile-subtitle {
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    color: #666;
+
+    max-width: 210px;
+}@keyframes profileFlip {
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    45% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    95% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}@media (max-width: 1100px) {.profile-title {
+        font-size: 16px;
+    }.profile-subtitle {
+        font-size: 9px;
+    }}@media (max-width: 600px) {.header-profile-flip {
+        width: 180px;
+        height: 58px;
+    }.header-profile-front img,
+    .header-profile-back img {
+        width: 52px;
+        height: 52px;
+    }.profile-title {
+        font-size: 14px;
+    }.profile-subtitle {
+        font-size: 8px;
+    }}.language-switcher {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ffffff;
+
+    padding: 5px 10px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}.lang-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 5px 8px;
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}.lang-btn:hover {
+    color: #1d6b3a;
+}.lang-btn.active {
+    background: #1d6b3a;
+
+    color: white;
+}.lang-divider {
+    color: #ccc;
+}html[dir="rtl"] .navbar {
+    margin-left: 0;
+
+    margin-right: auto;
+}html[dir="rtl"] .dropdown-menu {
+    left: auto;
+
+    right: 0;
+}html[dir="rtl"] .dropdown-menu li a:hover {
+    padding-left: 18px;
+
+    padding-right: 23px;
+}html[dir="rtl"] .lang-btn.active {
+    font-weight: bold;
+
+    color: var(--olive);
+}@media (max-width: 850px) {.header-content {
+        position: relative;
+    }.navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: var(--white);
+
+        border-top:
+            1px solid var(--border);
+
+        box-shadow:
+            var(--shadow-md);
+
+        z-index: 3000;
+
+        max-height:
+            calc(100vh - 75px);
+
+        overflow-y: auto;
+    }.navbar.mobile-open {
+        display: block !important;
+    }.nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 8px 0;
+
+        background-color: var(--white);
+    }.nav-list > li {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+
+        border-bottom:
+            1px solid var(--border);
+    }.nav-list > li:last-child {
+        border-bottom: none;
+    }.nav-list > li > a {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        color:
+            var(--dark) !important;
+
+        background-color:
+            var(--white);
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.nav-list > li > a:hover {
+        background-color:
+            var(--olive-light);
+
+        color:
+            var(--olive-dark) !important;
+    }.nav-list > li > a.active::after {
+        display: none;
+    }.dropdown-menu {
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        min-width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-top:
+            1px solid var(--border);
+
+        border-radius: 0;
+
+        background-color:
+            var(--olive-light);
+
+        transition: none;
+    }.dropdown:hover > .dropdown-menu {
+        display: none;
+    }.dropdown.open > .dropdown-menu,
+    .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }.dropdown > a > i {
+        transition:
+            transform 0.25s ease;
+    }.dropdown.open > a > i {
+        transform: rotate(180deg);
+    }.dropdown-menu li {
+        display: block;
+
+        width: 100%;
+    }.dropdown-menu li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 30px;
+
+        color:
+            var(--dark) !important;
+
+        font-size: 14px;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.dropdown-menu li a:hover {
+        background-color: #dfe8cf;
+
+        color:
+            var(--olive-dark) !important;
+    }.mobile-menu-btn {
+        display: block;
+
+        position: relative;
+
+        z-index: 3100;
+
+        flex-shrink: 0;
+    }}@media (max-width: 850px) {html[dir="rtl"] .navbar {
+        left: 0;
+
+        right: 0;
+
+        margin: 0;
+    }html[dir="rtl"] .nav-list > li > a {
+        text-align: right;
+    }html[dir="rtl"] .dropdown-menu {
+        right: auto;
+
+        left: auto;
+    }html[dir="rtl"] .dropdown-menu li a {
+        text-align: right;
+
+        padding:
+            12px
+            30px;
+    }html[dir="rtl"]
+    .dropdown-menu li a:hover {
+        padding-left: 30px;
+
+        padding-right: 35px;
+    }}@media (max-width: 480px) {.header-content {
+        gap: 8px;
+    }.profile-title {
+        font-size: 13px;
+    }.profile-subtitle {
+        font-size: 7px;
+
+        max-width: 95px;
+
+        line-height: 1.2;
+    }.language-switcher {
+        gap: 3px;
+
+        padding: 4px 6px;
+    }.lang-btn {
+        font-size: 11px;
+
+        padding: 4px 5px;
+    }.mobile-menu-btn {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 15px;
+    }}.share-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}.share-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: 50%;
+    color: var(--olive-dark);
+    cursor: pointer;
+    transition: var(--transition);
+}.share-btn:hover,
+.share-btn[aria-expanded="true"] {
+    background-color: var(--olive);
+    color: var(--white);
+    border-color: var(--olive);
+}.share-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 245px;
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--olive);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 3500;
+}.share-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}.share-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 14px;
+    width: 13px;
+    height: 13px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    transform: rotate(45deg);
+}.share-menu-title {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+}.share-socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}.share-option {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}.share-option:hover {
+    transform: translateY(-3px);
+    opacity: 0.88;
+}.share-option.whatsapp { background: #25D366; }.share-option.facebook { background: #1877F2; }.share-option.linkedin { background: #0A66C2; }.share-option.instagram {
+    background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);
+}.share-copy-row {
+    margin-top: 13px;
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--olive-light);
+    border-radius: 7px;
+}.share-copy-text {
+    color: var(--olive-dark);
+    font-size: 12px;
+    font-weight: 700;
+}.share-copy-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--olive-dark);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition);
+}.share-copy-btn:hover {
+    background: var(--olive);
+    color: var(--white);
+}html[dir="rtl"] .share-menu {
+    right: auto;
+    left: 0;
+}html[dir="rtl"] .share-menu::before {
+    right: auto;
+    left: 14px;
+}@media (max-width: 600px) {.share-btn {
+        width: 38px;
+        height: 38px;
+    }.share-menu {
+        position: fixed;
+        top: 88px;
+        right: 4%;
+        left: auto;
+        width: min(245px, 92vw);
+    }.share-menu::before {
+        display: none;
+    }html[dir="rtl"] .share-menu {
+        right: auto;
+        left: 4%;
+    }}@media (max-width: 480px) {.share-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }.share-menu {
+        top: 82px;
+    }}
+    
+
+/* IMPORTANT: keep header dropdowns independent from page dropdown CSS */
+.header .navbar .dropdown-menu {
+    display: block;
+    bottom: auto;
+    white-space: normal;
+}
+
+@media (max-width: 850px) {
+    .header .navbar .dropdown-menu {
+        display: none;
+    }
+
+    .header .navbar .dropdown.open > .dropdown-menu,
+    .header .navbar .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+        <!-- Main Header -->
+        <div class="main-header">
+
+            <div class="container header-content">
+
+
+                <!-- =================================================
+     LARI LOGO
+================================================== -->
+
+<a href="index.html" class="logo">
+
+    <img src="icon.jpg"
+         alt="LARI Logo">
+
+    <div class="profile-text">
+
+        <span class="profile-title"
+              data-i18n="profileTitle">
+            LARI
+        </span>
+
+        <span class="profile-subtitle"
+              data-i18n="profileSubtitle">
+            Lebanese Agricultural Research Institute
+        </span>
+
+    </div>
+
+</a>
+
+
+
+                <!-- =================================================
+                     NAVIGATION
+                ================================================== -->
+
+                <nav class="navbar" id="main-navigation">
+
+                    <ul class="nav-list">
+
+
+                        <!-- HOME -->
+
+                        <li>
+
+                            <a href="index.html"
+                               data-i18n="navHome">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             ABOUT US
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#" >
+
+                                <span data-i18n="navAboutus">
+                                    About us
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+
+                                    <a href="aboutus.html"
+                                       data-i18n="navWhoWeAre">
+
+                                        Who We Are
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="history.html"
+                                       data-i18n="navHistory">
+
+                                        History
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="mission.html"
+                                       data-i18n="navMission">
+
+                                        Mission & Vision
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="pdg.html"
+                                       data-i18n="navpdg">
+
+                                        P.D.G of LARI
+
+                                    </a>
+
+                                </li>
+
+
+                                
+                            </ul>
+
+                        </li>
+
+
+
+                         <!-- =================================================
+                             RESEARCH
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navResearch">
+
+            Research
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Current Research -->
+
+        <li>
+
+            <a href="current-research.html"
+               data-i18n="navCurrentResearchh">
+
+                Current Research
+
+            </a>
+
+        </li>
+
+
+        <!-- PUBLICATIONS -->
+
+        <li>
+
+            <a href="publications.html"
+               data-i18n="navPublications">
+
+                Publications
+
+            </a>
+
+        </li>
+
+
+        <!-- EUROPEAN & INTERNATIONAL PROJECTS -->
+
+        <li>
+
+            <a href="european-projects.html"
+               data-i18n="navEuropeanProjects">
+
+                European & International Projects
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             SERVICES
+                        ================================================== -->
+
+                       
+
+<li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navServices">
+
+            Services
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Soil Test-->
+
+        <li>
+
+            <a href="soil-lab.html"
+               data-i18n="navSoilTest">
+
+                Soil Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Water Test -->
+
+        <li>
+
+            <a href="water-unit.html"
+               data-i18n="navWaterTest">
+
+                Water Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Food Test -->
+
+        <li>
+
+            <a href="food-microbiology.html"
+               data-i18n="navFoodTest">
+
+                Food Test
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             STATIONS
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#"  class="active">
+
+                                <span data-i18n="navStations">
+                                    Stations
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+                                    <a href="tel-amara.html">
+                                        Tal Amara
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="lebaa.html">
+                                        Lebaa
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="tyre.html">
+                                        Tyre
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="fanar.html">
+                                        Fanar
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="kfarshakhna.html">
+                                        Kfarshakhna
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="abdeh.html">
+                                        Abdeh
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hasbaya.html">
+                                        Hasbaya
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="keserwan.html">
+                                        Keserwan
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="baakline.html">
+                                        Baakline
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="terbol.html">
+                                        Terbol
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hermel.html">
+                                        Hermel
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="kfarden.html">
+                                        Kfarden
+                                    </a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             CONTACT
+                        ================================================== -->
+
+                        <li>
+
+                            <a href="contact.html"
+                               data-i18n="navContactUs">
+
+                                Contact us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </nav>
+
+
+
+                <!-- =================================================
+                     HEADER ACTIONS
+                ================================================== -->
+
+                <div class="header-actions">
+
+
+                    <!-- SEARCH -->
+
+                    <button class="search-btn"
+                            aria-label="Search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+
+                    <!-- SHARE -->
+
+                    <div class="share-wrapper">
+
+                        <button class="share-btn"
+                                id="shareButton"
+                                type="button"
+                                aria-label="Share this page"
+                                aria-expanded="false"
+                                aria-controls="shareMenu">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+
+                        <div class="share-menu"
+                             id="shareMenu"
+                             role="menu"
+                             aria-label="Share this page">
+
+                            <span class="share-menu-title">Share this page</span>
+
+                            <div class="share-socials">
+
+                                <button class="share-option whatsapp"
+                                        type="button"
+                                        data-share="whatsapp"
+                                        aria-label="Share on WhatsApp"
+                                        title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </button>
+
+                                <button class="share-option facebook"
+                                        type="button"
+                                        data-share="facebook"
+                                        aria-label="Share on Facebook"
+                                        title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </button>
+
+                                <button class="share-option linkedin"
+                                        type="button"
+                                        data-share="linkedin"
+                                        aria-label="Share on LinkedIn"
+                                        title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </button>
+
+                                <button class="share-option instagram"
+                                        type="button"
+                                        data-share="instagram"
+                                        aria-label="Copy link for Instagram"
+                                        title="Copy link for Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="share-copy-row">
+                                <span class="share-copy-text" id="shareCopyText">Copy link</span>
+                                <button class="share-copy-btn"
+                                        type="button"
+                                        id="copyShareLink"
+                                        aria-label="Copy page link">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LANGUAGE SWITCHER -->
+
+                    <div class="language-switcher">
+
+                        <button class="lang-btn active"
+                                id="englishBtn"
+                                onclick="changeLanguage('en')">
+
+                            EN
+
+                        </button>
+
+
+                        <span class="lang-divider">
+
+                            |
+
+                        </span>
+
+
+                        <button class="lang-btn"
+                                id="arabicBtn"
+                                onclick="changeLanguage('ar')">
+
+                            العربية
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="mobile-menu-btn"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="research-hero">
+
+    <div class="hero-decoration"></div>
+
+
+    <div class="hero-content">
+
+
+        <span class="hero-label">
+
+            <i class="fa-solid fa-location-dot"
+               style="margin-right:7px;"></i>
+
+            LARI RESEARCH STATION
+
+        </span>
+
+
+        <h1>
+
+            Hasbaya
+
+            <span>
+                Station
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            <i class="fa-solid fa-flask-vial"
+               style="
+                   color:#aeb85a;
+                   margin-right:8px;
+               ">
+            </i>
+
+            Laboratory analysis of water,
+            soil and olive oil,
+            combined with applied research,
+            agricultural services
+            and environmental projects.
+
+        </p>
+
+
+        <div class="hero-line"></div>
+
+
+        <div class="hero-tags">
+
+
+            <span>
+                <i class="fa-solid fa-droplet"></i>
+                Water
+            </span>
+
+
+            <span>
+                <i class="fa-solid fa-mountain"></i>
+                Soil
+            </span>
+
+
+            <span>
+                <i class="fa-solid fa-bottle-droplet"></i>
+                Olive Oil
+            </span>
+
+
+            <span>
+                <i class="fa-solid fa-microscope"></i>
+                Research
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="introduction">
+
+    <div class="container">
+
+
+        <div class="intro-icon">
+
+            <i class="fa-solid fa-flask-vial"></i>
+
+        </div>
+
+
+        <div class="intro-content">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-circle-info"
+                   style="margin-right:6px;"></i>
+
+                ABOUT HASBAYA STATION
+
+            </span>
+
+
+            <h2>
+                Laboratory Services & Applied Research
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-vials"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                The laboratories of Hasbaya Station
+                have a double role: routine analysis
+                of water, soil and olive oil samples,
+                and participation in research projects.
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-seedling"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                These research projects support
+                the agricultural sector
+                and the environment in Lebanon.
+
+            </p>
+
+
+            <div class="intro-highlight">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Hasbaya Station combines routine laboratory work,
+                    farmer services and scientific research
+                    in agriculture and environmental protection.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OLIVE OIL ANALYSIS
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-bottle-droplet"
+                   style="margin-right:6px;"></i>
+
+                OLIVE OIL ANALYSIS
+
+            </span>
+
+
+            <h2>
+                Routine Olive Oil Parameters
+            </h2>
+
+
+            <p>
+                The laboratory evaluates
+                important quality indicators
+                in olive oil samples.
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    01
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-wave-square"></i>
+                </div>
+
+                <h3>
+                    Delta K
+                </h3>
+
+                <p>
+                    Measurement of Delta K
+                    as part of olive-oil
+                    quality assessment.
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    02
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+
+                <h3>
+                    Acidity
+                </h3>
+
+                <p>
+                    Determination of olive-oil
+                    acidity levels.
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    03
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-vial"></i>
+                </div>
+
+                <h3>
+                    Peroxide
+                </h3>
+
+                <p>
+                    Measurement of peroxide value
+                    in olive-oil samples.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WATER MICROBIOLOGY
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-bacteria"
+                   style="margin-right:6px;"></i>
+
+                WATER MICROBIOLOGY
+
+            </span>
+
+
+            <h2>
+                Microbiological Water Analysis
+            </h2>
+
+
+            <p>
+                Routine microbiological parameters
+                are tested to evaluate
+                water quality.
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    01
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bacteria"></i>
+                </div>
+
+                <h3>
+                    Total Aerobic Count 22°C
+                </h3>
+
+                <p>
+                    CFU/mL
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    02
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bacteria"></i>
+                </div>
+
+                <h3>
+                    Total Aerobic Count 37°C
+                </h3>
+
+                <p>
+                    CFU/mL
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    03
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+
+                <h3>
+                    Total Coliforms
+                </h3>
+
+                <p>
+                    CFU/100mL
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    04
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bacteria"></i>
+                </div>
+
+                <h3>
+                    Fecal Coliforms
+                </h3>
+
+                <p>
+                    CFU/250mL
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    05
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bacteria"></i>
+                </div>
+
+                <h3>
+                    Escherichia coli
+                </h3>
+
+                <p>
+                    CFU/250mL
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    06
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bacteria"></i>
+                </div>
+
+                <h3>
+                    Streptococcus Group D
+                </h3>
+
+                <p>
+                    CFU/250mL
+                </p>
+
+            </article>
+
+
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    07
+                </div>
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bacteria"></i>
+                </div>
+
+                <h3>
+                    Pseudomonas aeruginosa
+                </h3>
+
+                <p>
+                    CFU/250mL
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WATER PHYSICO-CHEMICAL ANALYSIS
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-droplet"
+                   style="margin-right:6px;"></i>
+
+                WATER CHEMISTRY
+
+            </span>
+
+
+            <h2>
+                Physical & Chemical Properties of Water
+            </h2>
+
+
+            <p>
+                Routine analysis includes
+                physical indicators,
+                dissolved solids,
+                ions and minerals.
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">01</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-vial"></i>
+                </div>
+                <h3>pH</h3>
+                <p>Water acidity and alkalinity.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">02</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Conductivity at 20°C</h3>
+                <p>Measured in μS/cm.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">03</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <h3>Total Dissolved Solids</h3>
+                <p>Measured in mg/L.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">04</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>Bicarbonates</h3>
+                <p>Measured in mg/L.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">05</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <h3>Water Hardness</h3>
+                <p>Measured in mg/L.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">06</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Calcium</h3>
+                <p>mg CaCO3/L.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">07</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Magnesium</h3>
+                <p>mg Mg/L.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">08</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Sodium</h3>
+                <p>mg Na/L.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">09</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Potassium</h3>
+                <p>mg K/L.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">10</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>Chloride</h3>
+                <p>mg Cl-/L.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">11</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-vials"></i>
+                </div>
+                <h3>Nitrates</h3>
+                <p>mg NO3/L.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">12</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-magnet"></i>
+                </div>
+                <h3>Iron</h3>
+                <p>mg Fe/L.</p>
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOIL ANALYSIS
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-mountain"
+                   style="margin-right:6px;"></i>
+
+                SOIL ANALYSIS
+
+            </span>
+
+
+            <h2>
+                Physical & Chemical Properties of Soil
+            </h2>
+
+
+            <p>
+                Soil testing covers texture,
+                chemical characteristics,
+                organic components and nutrients.
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">01</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <h3>Soil Texture</h3>
+                <p>Physical soil characterization.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">02</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-vial"></i>
+                </div>
+                <h3>pH</h3>
+                <p>Soil acidity and alkalinity.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">03</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Conductivity</h3>
+                <p>Measured in mS.cm-1.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">04</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h3>Organic Matter</h3>
+                <p>Percentage of organic matter.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">05</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-mountain"></i>
+                </div>
+                <h3>Total Calcite</h3>
+                <p>Percentage of total calcite.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">06</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                </div>
+                <h3>Active Calcite</h3>
+                <p>Percentage of active calcite.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">07</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>Organic Nitrogen</h3>
+                <p>Percentage of organic nitrogen.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">08</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Available Phosphorus</h3>
+                <p>P2O5 measured in ppm.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">09</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Exchangeable Potassium</h3>
+                <p>K2O measured in ppm.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">10</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Exchangeable Sodium</h3>
+                <p>Na measured in ppm.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">11</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Exchangeable Calcium</h3>
+                <p>CaO measured in ppm.</p>
+            </article>
+
+
+            <article class="activity-card">
+                <div class="activity-number">12</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-flask-vial"></i>
+                </div>
+                <h3>Exchangeable Magnesium</h3>
+                <p>MgO measured in ppm.</p>
+            </article>
+
+
+            <article class="activity-card featured">
+                <div class="activity-number">13</div>
+                <div class="activity-icon">
+                    <i class="fa-solid fa-magnet"></i>
+                </div>
+                <h3>Available Iron</h3>
+                <p>Fe measured in ppm.</p>
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-diagram-project"
+                   style="margin-right:6px;"></i>
+
+                RESEARCH PROJECTS
+
+            </span>
+
+
+            <h2>
+                Current Research & Development Projects
+            </h2>
+
+
+            <p>
+                Hasbaya Station works on projects
+                related to olive genetic resources,
+                rural resilience and water quality.
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    01
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+
+                <h3>
+                    Centennial Olive Trees in Lebanon
+                </h3>
+
+
+                <p>
+                    Study of geographical,
+                    biological and agricultural
+                    characteristics of ancient olive trees.
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+                        <i class="fa-solid fa-handshake"
+                           style="margin-right:7px;"></i>
+
+                        Collaboration
+                    </strong>
+
+                    <span>
+                        Hasbaya Station
+                    </span>
+
+                    <span>
+                        Olive & Olive Oil Department,
+                        Tal Amara
+                    </span>
+
+                    <span>
+                        UMR AGAP,
+                        Montpellier, France
+                    </span>
+
+
+                    <strong>
+                        <i class="fa-solid fa-list-check"
+                           style="margin-right:7px;"></i>
+
+                        Research Areas
+                    </strong>
+
+                    <span>
+                        Molecular and morphological characterization
+                    </span>
+
+                    <span>
+                        Fatty acids, phenolic compounds
+                        and oil content
+                    </span>
+
+                    <span>
+                        Phenological performance
+                        under contrasting agroclimatic conditions
+                    </span>
+
+                    <span>
+                        Climate-change projections
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="activity-card">
+
+                <div class="activity-number">
+                    02
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-bottle-droplet"></i>
+                </div>
+
+
+                <h3>
+                    OLIVE – Place-of-Origin Quality Brand
+                </h3>
+
+
+                <p>
+                    Supporting olive growers
+                    and cooperatives in Hasbaya
+                    through improved resilience
+                    and olive-sector development.
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+                        <i class="fa-solid fa-handshake"
+                           style="margin-right:7px;"></i>
+
+                        Collaboration
+                    </strong>
+
+                    <span>
+                        Hasbaya Station
+                    </span>
+
+                    <span>
+                        Centro Laici Italiani per le Missioni - CELIM
+                    </span>
+
+                    <span>
+                        El Khalil Foundation
+                    </span>
+
+
+                    <strong>
+                        <i class="fa-solid fa-people-group"
+                           style="margin-right:7px;"></i>
+
+                        Target
+                    </strong>
+
+                    <span>
+                        Improve resilience conditions
+                        of at least 2,935 Lebanese
+                        in rural areas of Hasbaya District
+                        involved in the olive-oil sector.
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="activity-card featured">
+
+                <div class="activity-number">
+                    03
+                </div>
+
+
+                <div class="activity-icon">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+
+
+                <h3>
+                    Surface & Groundwater Quality
+                </h3>
+
+
+                <p>
+                    Research highlighting
+                    water-pollution problems
+                    in Hasbaya and Marjaayoun.
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+                        <i class="fa-solid fa-flask"
+                           style="margin-right:7px;"></i>
+
+                        Approach
+                    </strong>
+
+                    <span>
+                        Comprehensive sampling
+                    </span>
+
+                    <span>
+                        Routine parameter analysis
+                    </span>
+
+                    <span>
+                        Heavy-metal analysis
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="impact-section">
+
+    <div class="container">
+
+
+        <div class="impact-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-hand-holding-heart"
+                   style="margin-right:6px;"></i>
+
+                SERVICES
+
+            </span>
+
+
+            <h2>
+                Agricultural & Training Services
+            </h2>
+
+
+            <p>
+                Hasbaya Station supports farmers,
+                students and agricultural monitoring.
+            </p>
+
+        </div>
+
+
+
+        <div class="impact-grid">
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                </div>
+
+                <h3>
+                    Farmer Workshops
+                </h3>
+
+                <p>
+                    Organizing workshops
+                    and training sessions
+                    for farmers.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <h3>
+                    Early Warning Service
+                </h3>
+
+                <p>
+                    Early warning
+                    for agricultural pests
+                    and diseases.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+
+                <h3>
+                    Meteorological Station
+                </h3>
+
+                <p>
+                    Managing Hasbaya's meteorological station
+                    and documenting its data.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <h3>
+                    Student Training
+                </h3>
+
+                <p>
+                    Training university students
+                    and supporting graduation theses.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STAFF
+===================================================== -->
+
+<section class="staff-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-users"
+                   style="margin-right:6px;"></i>
+
+                OUR TEAM
+
+            </span>
+
+
+            <h2>
+                Staff
+            </h2>
+
+
+            <p>
+                Meet the team
+                of Hasbaya Station.
+            </p>
+
+        </div>
+
+
+
+        <div class="staff-grid">
+
+
+            <!-- AMIRA -->
+
+            <div class="staff-card staff-head">
+
+
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+
+                <div class="staff-info">
+
+                    <span class="staff-role">
+
+                        <i class="fa-solid fa-star"
+                           style="margin-right:5px;"></i>
+
+                        HEAD OF STATION
+
+                    </span>
+
+                    <h3>
+                        Amira Youssef
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"
+                           style="color:#788533;margin-right:6px;"></i>
+
+                        Head of Hasbaya Station
+                    </p>
+
+                    <a href="mailto:amira-youssef@lari.gov.lb">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        amira-youssef@lari.gov.lb
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">LABORATORY TECHNICIAN</span>
+                    <h3>Hala Abou Trabi</h3>
+                    <p>Laboratory Technician</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">LABORATORY TECHNICIAN</span>
+                    <h3>Nour Kreidy</h3>
+                    <p>Laboratory Technician</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">LABORATORY TECHNICIAN</span>
+                    <h3>Zeina Abou Ibrahim</h3>
+                    <p>Laboratory Technician</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">AGRICULTURAL TECHNICIAN</span>
+                    <h3>Rajaa Ghaida</h3>
+                    <p>Agricultural Technician</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">AGRICULTURAL TECHNICIAN</span>
+                    <h3>Nisrine Abou Hamad</h3>
+                    <p>Agricultural Technician</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">ADMINISTRATIVE ASSISTANT</span>
+                    <h3>Wassim Syagha</h3>
+                    <p>Administrative Assistant</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">ADMINISTRATIVE ASSISTANT</span>
+                    <h3>Kholoud Zwaihed</h3>
+                    <p>Administrative Assistant</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-computer"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">INFORMATION TECHNICIAN</span>
+                    <h3>Hekmat Shamout</h3>
+                    <p>Information Technician</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">DRIVER</span>
+                    <h3>Rabih Abou Faour</h3>
+                    <p>Driver</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-broom"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">JANITOR</span>
+                    <h3>Fadi Raad</h3>
+                    <p>Janitor</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">GUARD</span>
+                    <h3>Naye Saassouh</h3>
+                    <p>Guard</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-person-digging"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">WORKER</span>
+                    <h3>Jawad Dagher</h3>
+                    <p>Station Worker</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-person-digging"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">WORKER</span>
+                    <h3>Toufic Makarios</h3>
+                    <p>Station Worker</p>
+                </div>
+            </div>
+
+
+            <div class="staff-card">
+                <div class="staff-avatar">
+                    <i class="fa-solid fa-person-digging"></i>
+                </div>
+                <div class="staff-info">
+                    <span class="staff-role">WORKER</span>
+                    <h3>Zaher AbouFaour</h3>
+                    <p>Station Worker</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PUBLICATIONS
+===================================================== -->
+
+<section class="publications-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-book-open"
+                   style="margin-right:6px;"></i>
+
+                SCIENTIFIC OUTPUT
+
+            </span>
+
+
+            <h2>
+                Publications
+            </h2>
+
+
+            <p>
+                Scientific papers published
+                in collaboration with institutes,
+                universities, stations
+                and other LARI departments.
+            </p>
+
+        </div>
+
+
+
+        <div class="publications-list">
+
+
+            <article class="publication">
+
+                <span class="publication-year">
+                    2018
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        Chemical and Sensorial Characteristics
+                        of Olive Oil Produced from the Lebanese
+                        Olive Variety “Baladi”
+                    </h3>
+
+
+                    <p>
+                        Milad El Riachy,
+                        Christelle Bou-Mitri,
+                        Amira Youssef,
+                        Roland Andary
+                        and Wadih Skaff.
+                        Sustainability Journal,
+                        6 December 2018.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="publication">
+
+                <span class="publication-year">
+                    2018
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        In-Situ Preliminary Assessment
+                        of Centennial Olive Trees in Lebanon
+                        Indicates a High Potential for Selection
+                    </h3>
+
+
+                    <p>
+                        L. Chalak,
+                        A. Youssef,
+                        A. Hamadeh,
+                        B. Khadari,
+                        M. El Riachy.
+                        DOI: 10.17660/ActaHortic.2018.1199.6
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="publication">
+
+                <span class="publication-year">
+                    2017
+                </span>
+
+
+                <div>
+
+                    <h3>
+                        First Record of Olive Pyralid Moth,
+                        Euzophera pinguis,
+                        on Olive Trees in Lebanon
+                    </h3>
+
+
+                    <p>
+                        Zinette Moussa,
+                        Elia Choueiri,
+                        Amira Youssef
+                        and Milad El Riachy.
+                        Bulletin de la Société Entomologique de France,
+                        122(1), 57-60.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="research-cta">
+
+    <div class="container">
+
+
+        <div class="cta-icon">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+
+
+        <h2>
+            Explore LARI Stations
+        </h2>
+
+
+        <p>
+            Discover the other research stations,
+            laboratories and agricultural activities
+            of the Lebanese Agricultural Research Institute.
+        </p>
+
+
+        <a href="index.html"
+           class="cta-button">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to All Stations
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<!-- =====================================================
+     FOOTER - HASBAYA STATION
+===================================================== -->
+
+<footer class="research-footer">
+
+    <div class="footer-container">
+
+        <!-- LARI BRAND -->
+        <div class="footer-brand">
+
+            <h3>
+                <i class="fa-solid fa-seedling"
+                   style="margin-right:7px;"></i>
+
+                LARI
+            </h3>
+
+            <p>
+                Lebanese Agricultural Research Institute
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT + SOCIAL MEDIA -->
+        <div class="footer-links" style="margin-left: auto;">
+
+            <!-- LOCATION -->
+            <a href="https://www.google.com/maps/search/?api=1&query=33.4009732,35.6772606"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Hasbaya
+
+            </a>
+
+
+            <!-- PHONE -->
+            <a href="tel:+96107550210">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +961 07 550 210
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+            <a href="YOUR_LINKEDIN_LINK"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/share/1BhZGqhteZ/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/leb_agricultural_institute?igsh=ZHFiNzBqemh6cHV4"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            <i class="fa-regular fa-copyright"></i>
+
+            2026 Lebanese Agricultural Research Institute.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const dropdown =
+        document.querySelector(".dropdown");
+
+    const dropdownToggle =
+        document.querySelector(".dropdown-toggle");
+
+
+    if (dropdown && dropdownToggle) {
+
+        dropdownToggle.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                dropdown.classList.toggle("open");
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (!dropdown.contains(event.target)) {
+
+                    dropdown.classList.remove("open");
+
+                }
+
+            }
+        );
+
+    }
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

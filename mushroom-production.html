@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="icon.jpg">
+
+    <title>Mushroom Production | LARI</title>
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         SAME CSS AS OTHER TEL AMARA PAGES
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="stations.css">
+
+          <!-- HEADER CSS: same as index.html and kept only inside this HTML file -->
+      <style>
+/* =========================================================
+   INDEX HEADER FOUNDATION
+   Keeps this header independent from aboutus.css
+========================================================= */
+
+.header {
+    --olive: #667A3E;
+    --olive-dark: #4F6230;
+    --olive-light: #EEF2E6;
+    --white: #FFFFFF;
+    --border: #E2E4DA;
+    --dark: #26301F;
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --transition: all 0.3s ease;
+
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header *,
+.header *::before,
+.header *::after {
+    box-sizing: border-box;
+}
+
+.header .container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header button {
+    font-family: inherit;
+}
+
+.main-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 1000;
+}.header-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}.logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}.navbar {
+    margin-left: auto;
+}.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}.nav-list > li {
+    position: relative;
+}.nav-list > li > a {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 12px 10px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}.nav-list > li > a:hover,
+.nav-list > li > a.active {
+    color: var(--olive);
+}.nav-list > li > a.active {
+    position: relative;
+}.nav-list > li > a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 2px;
+
+    height: 2px;
+
+    background-color: var(--olive);
+}.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    left: 0;
+
+    min-width: 220px;
+
+    background-color: var(--white);
+
+    border-top: 3px solid var(--olive);
+
+    box-shadow: var(--shadow-md);
+
+    border-radius: 0 0 8px 8px;
+
+    padding: 8px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: var(--transition);
+}.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}.dropdown-menu li a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}.dropdown-menu li a:hover {
+    background-color: var(--olive-light);
+
+    color: var(--olive-dark);
+
+    padding-left: 23px;
+}.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}.search-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--white);
+
+    border-radius: 50%;
+
+    color: var(--olive-dark);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}.search-btn:hover {
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-color: var(--olive);
+}.mobile-menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}@media (max-width: 1100px) {.nav-list {
+        gap: 0;
+    }.nav-list > li > a {
+        padding: 10px 7px;
+
+        font-size: 13px;
+    }}@media (max-width: 850px) {.header-content {
+        min-height: 75px;
+    }.logo img {
+        width: 52px;
+        height: 52px;
+    }.navbar {
+        display: none;
+    }.header-actions {
+        margin-left: auto;
+    }.mobile-menu-btn {
+        display: block;
+    }}@media (max-width: 600px) {.header-actions {
+        gap: 6px;
+    }.search-btn,
+    .mobile-menu-btn {
+        width: 38px;
+        height: 38px;
+    }}.profile-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}.profile-title {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1f6b45;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}.profile-subtitle {
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    color: #666;
+
+    max-width: 210px;
+}@keyframes profileFlip {
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    45% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    95% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}@media (max-width: 1100px) {.profile-title {
+        font-size: 16px;
+    }.profile-subtitle {
+        font-size: 9px;
+    }}@media (max-width: 600px) {.header-profile-flip {
+        width: 180px;
+        height: 58px;
+    }.header-profile-front img,
+    .header-profile-back img {
+        width: 52px;
+        height: 52px;
+    }.profile-title {
+        font-size: 14px;
+    }.profile-subtitle {
+        font-size: 8px;
+    }}.language-switcher {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ffffff;
+
+    padding: 5px 10px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}.lang-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 5px 8px;
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}.lang-btn:hover {
+    color: #1d6b3a;
+}.lang-btn.active {
+    background: #1d6b3a;
+
+    color: white;
+}.lang-divider {
+    color: #ccc;
+}html[dir="rtl"] .navbar {
+    margin-left: 0;
+
+    margin-right: auto;
+}html[dir="rtl"] .dropdown-menu {
+    left: auto;
+
+    right: 0;
+}html[dir="rtl"] .dropdown-menu li a:hover {
+    padding-left: 18px;
+
+    padding-right: 23px;
+}html[dir="rtl"] .lang-btn.active {
+    font-weight: bold;
+
+    color: var(--olive);
+}@media (max-width: 850px) {.header-content {
+        position: relative;
+    }.navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: var(--white);
+
+        border-top:
+            1px solid var(--border);
+
+        box-shadow:
+            var(--shadow-md);
+
+        z-index: 3000;
+
+        max-height:
+            calc(100vh - 75px);
+
+        overflow-y: auto;
+    }.navbar.mobile-open {
+        display: block !important;
+    }.nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 8px 0;
+
+        background-color: var(--white);
+    }.nav-list > li {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+
+        border-bottom:
+            1px solid var(--border);
+    }.nav-list > li:last-child {
+        border-bottom: none;
+    }.nav-list > li > a {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        color:
+            var(--dark) !important;
+
+        background-color:
+            var(--white);
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.nav-list > li > a:hover {
+        background-color:
+            var(--olive-light);
+
+        color:
+            var(--olive-dark) !important;
+    }.nav-list > li > a.active::after {
+        display: none;
+    }.dropdown-menu {
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        min-width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-top:
+            1px solid var(--border);
+
+        border-radius: 0;
+
+        background-color:
+            var(--olive-light);
+
+        transition: none;
+    }.dropdown:hover > .dropdown-menu {
+        display: none;
+    }.dropdown.open > .dropdown-menu,
+    .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }.dropdown > a > i {
+        transition:
+            transform 0.25s ease;
+    }.dropdown.open > a > i {
+        transform: rotate(180deg);
+    }.dropdown-menu li {
+        display: block;
+
+        width: 100%;
+    }.dropdown-menu li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 30px;
+
+        color:
+            var(--dark) !important;
+
+        font-size: 14px;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.dropdown-menu li a:hover {
+        background-color: #dfe8cf;
+
+        color:
+            var(--olive-dark) !important;
+    }.mobile-menu-btn {
+        display: block;
+
+        position: relative;
+
+        z-index: 3100;
+
+        flex-shrink: 0;
+    }}@media (max-width: 850px) {html[dir="rtl"] .navbar {
+        left: 0;
+
+        right: 0;
+
+        margin: 0;
+    }html[dir="rtl"] .nav-list > li > a {
+        text-align: right;
+    }html[dir="rtl"] .dropdown-menu {
+        right: auto;
+
+        left: auto;
+    }html[dir="rtl"] .dropdown-menu li a {
+        text-align: right;
+
+        padding:
+            12px
+            30px;
+    }html[dir="rtl"]
+    .dropdown-menu li a:hover {
+        padding-left: 30px;
+
+        padding-right: 35px;
+    }}@media (max-width: 480px) {.header-content {
+        gap: 8px;
+    }.profile-title {
+        font-size: 13px;
+    }.profile-subtitle {
+        font-size: 7px;
+
+        max-width: 95px;
+
+        line-height: 1.2;
+    }.language-switcher {
+        gap: 3px;
+
+        padding: 4px 6px;
+    }.lang-btn {
+        font-size: 11px;
+
+        padding: 4px 5px;
+    }.mobile-menu-btn {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 15px;
+    }}.share-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}.share-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: 50%;
+    color: var(--olive-dark);
+    cursor: pointer;
+    transition: var(--transition);
+}.share-btn:hover,
+.share-btn[aria-expanded="true"] {
+    background-color: var(--olive);
+    color: var(--white);
+    border-color: var(--olive);
+}.share-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 245px;
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--olive);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 3500;
+}.share-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}.share-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 14px;
+    width: 13px;
+    height: 13px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    transform: rotate(45deg);
+}.share-menu-title {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+}.share-socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}.share-option {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}.share-option:hover {
+    transform: translateY(-3px);
+    opacity: 0.88;
+}.share-option.whatsapp { background: #25D366; }.share-option.facebook { background: #1877F2; }.share-option.linkedin { background: #0A66C2; }.share-option.instagram {
+    background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);
+}.share-copy-row {
+    margin-top: 13px;
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--olive-light);
+    border-radius: 7px;
+}.share-copy-text {
+    color: var(--olive-dark);
+    font-size: 12px;
+    font-weight: 700;
+}.share-copy-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--olive-dark);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition);
+}.share-copy-btn:hover {
+    background: var(--olive);
+    color: var(--white);
+}html[dir="rtl"] .share-menu {
+    right: auto;
+    left: 0;
+}html[dir="rtl"] .share-menu::before {
+    right: auto;
+    left: 14px;
+}@media (max-width: 600px) {.share-btn {
+        width: 38px;
+        height: 38px;
+    }.share-menu {
+        position: fixed;
+        top: 88px;
+        right: 4%;
+        left: auto;
+        width: min(245px, 92vw);
+    }.share-menu::before {
+        display: none;
+    }html[dir="rtl"] .share-menu {
+        right: auto;
+        left: 4%;
+    }}@media (max-width: 480px) {.share-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }.share-menu {
+        top: 82px;
+    }}
+    
+
+/* IMPORTANT: keep header dropdowns independent from page dropdown CSS */
+.header .navbar .dropdown-menu {
+    display: block;
+    bottom: auto;
+    white-space: normal;
+}
+
+@media (max-width: 850px) {
+    .header .navbar .dropdown-menu {
+        display: none;
+    }
+
+    .header .navbar .dropdown.open > .dropdown-menu,
+    .header .navbar .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+        <!-- Main Header -->
+        <div class="main-header">
+
+            <div class="container header-content">
+
+
+                <!-- =================================================
+     LARI LOGO
+================================================== -->
+
+<a href="index.html" class="logo">
+
+    <img src="icon.jpg"
+         alt="LARI Logo">
+
+    <div class="profile-text">
+
+        <span class="profile-title"
+              data-i18n="profileTitle">
+            LARI
+        </span>
+
+        <span class="profile-subtitle"
+              data-i18n="profileSubtitle">
+            Lebanese Agricultural Research Institute
+        </span>
+
+    </div>
+
+</a>
+
+
+
+                <!-- =================================================
+                     NAVIGATION
+                ================================================== -->
+
+                <nav class="navbar" id="main-navigation">
+
+                    <ul class="nav-list">
+
+
+                        <!-- HOME -->
+
+                        <li>
+
+                            <a href="index.html"
+                               data-i18n="navHome">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             ABOUT US
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#">
+
+                                <span data-i18n="navAboutus">
+                                    About us
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+
+                                    <a href="aboutus.html"
+                                       data-i18n="navWhoWeAre">
+
+                                        Who We Are
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="history.html"
+                                       data-i18n="navHistory">
+
+                                        History
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="mission.html"
+                                       data-i18n="navMission">
+
+                                        Mission & Vision
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="pdg.html"
+                                       data-i18n="navpdg">
+
+                                        P.D.G of LARI
+
+                                    </a>
+
+                                </li>
+
+
+                                
+                            </ul>
+
+                        </li>
+
+
+
+                         <!-- =================================================
+                             RESEARCH
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navResearch">
+
+            Research
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Current Research -->
+
+        <li>
+
+            <a href="current-research.html"
+               data-i18n="navCurrentResearchh">
+
+                Current Research
+
+            </a>
+
+        </li>
+
+
+        <!-- PUBLICATIONS -->
+
+        <li>
+
+            <a href="publications.html"
+               data-i18n="navPublications">
+
+                Publications
+
+            </a>
+
+        </li>
+
+
+        <!-- EUROPEAN & INTERNATIONAL PROJECTS -->
+
+        <li>
+
+            <a href="european-projects.html"
+               data-i18n="navEuropeanProjects">
+
+                European & International Projects
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             SERVICES
+                        ================================================== -->
+
+                       
+
+<li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navServices">
+
+            Services
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Soil Test-->
+
+        <li>
+
+            <a href="soil-lab.html"
+               data-i18n="navSoilTest">
+
+                Soil Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Water Test -->
+
+        <li>
+
+            <a href="water-unit.html"
+               data-i18n="navWaterTest">
+
+                Water Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Food Test -->
+
+        <li>
+
+            <a href="food-microbiology.html"
+               data-i18n="navFoodTest">
+
+                Food Test
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             STATIONS
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#" class="active">
+
+                                <span data-i18n="navStations">
+                                    Stations
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+                                    <a href="tel-amara.html">
+                                        Tal Amara
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="lebaa.html">
+                                        Lebaa
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="tyre.html">
+                                        Tyre
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="fanar.html">
+                                        Fanar
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="kfarshakhna.html">
+                                        Kfarshakhna
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="abdeh.html">
+                                        Abdeh
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hasbaya.html">
+                                        Hasbaya
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="keserwan.html">
+                                        Keserwan
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="baakline.html">
+                                        Baakline
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="terbol.html">
+                                        Terbol
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hermel.html">
+                                        Hermel
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="kfarden.html">
+                                        Kfarden
+                                    </a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             CONTACT
+                        ================================================== -->
+
+                        <li>
+
+                            <a href="contact.html"
+                               data-i18n="navContactUs">
+
+                                Contact us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </nav>
+
+
+
+                <!-- =================================================
+                     HEADER ACTIONS
+                ================================================== -->
+
+                <div class="header-actions">
+
+
+                    <!-- SEARCH -->
+
+                    <button class="search-btn"
+                            aria-label="Search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+
+                    <!-- SHARE -->
+
+                    <div class="share-wrapper">
+
+                        <button class="share-btn"
+                                id="shareButton"
+                                type="button"
+                                aria-label="Share this page"
+                                aria-expanded="false"
+                                aria-controls="shareMenu">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+
+                        <div class="share-menu"
+                             id="shareMenu"
+                             role="menu"
+                             aria-label="Share this page">
+
+                            <span class="share-menu-title">Share this page</span>
+
+                            <div class="share-socials">
+
+                                <button class="share-option whatsapp"
+                                        type="button"
+                                        data-share="whatsapp"
+                                        aria-label="Share on WhatsApp"
+                                        title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </button>
+
+                                <button class="share-option facebook"
+                                        type="button"
+                                        data-share="facebook"
+                                        aria-label="Share on Facebook"
+                                        title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </button>
+
+                                <button class="share-option linkedin"
+                                        type="button"
+                                        data-share="linkedin"
+                                        aria-label="Share on LinkedIn"
+                                        title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </button>
+
+                                <button class="share-option instagram"
+                                        type="button"
+                                        data-share="instagram"
+                                        aria-label="Copy link for Instagram"
+                                        title="Copy link for Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="share-copy-row">
+                                <span class="share-copy-text" id="shareCopyText">Copy link</span>
+                                <button class="share-copy-btn"
+                                        type="button"
+                                        id="copyShareLink"
+                                        aria-label="Copy page link">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LANGUAGE SWITCHER -->
+
+                    <div class="language-switcher">
+
+                        <button class="lang-btn active"
+                                id="englishBtn"
+                                onclick="changeLanguage('en')">
+
+                            EN
+
+                        </button>
+
+
+                        <span class="lang-divider">
+
+                            |
+
+                        </span>
+
+
+                        <button class="lang-btn"
+                                id="arabicBtn"
+                                onclick="changeLanguage('ar')">
+
+                            العربية
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="mobile-menu-btn"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="research-hero">
+
+    <div class="hero-decoration"></div>
+
+
+    <div class="hero-content">
+
+
+        <span class="hero-label">
+
+            <i class="fa-solid fa-location-dot"
+               style="margin-right:7px;"></i>
+
+            TAL AMARA STATION
+
+        </span>
+
+
+        <h1>
+
+            Mushroom
+
+            <span>
+                Production
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            <i class="fa-solid fa-seedling"
+               style="
+                   color:#aeb85a;
+                   margin-right:8px;
+               ">
+            </i>
+
+            Conservation, multiplication and cultivation
+            of different mushroom species, with specialized
+            production of mycelium, spawn and sterile
+            culture media.
+
+        </p>
+
+
+        <div class="hero-line"></div>
+
+
+
+        <!-- HERO TAGS -->
+
+        <div class="hero-tags">
+
+
+            <span>
+
+                <i class="fa-solid fa-seedling"></i>
+
+                26 Species
+
+            </span>
+
+
+            <span>
+
+                <i class="fa-solid fa-flask"></i>
+
+                Mycelium
+
+            </span>
+
+
+            <span>
+
+                <i class="fa-solid fa-wheat-awn"></i>
+
+                Spawn Production
+
+            </span>
+
+
+            <span>
+
+                <i class="fa-solid fa-microscope"></i>
+
+                Laboratory Culture
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="introduction">
+
+    <div class="container">
+
+
+        <div class="intro-icon">
+
+            <i class="fa-solid fa-seedling"></i>
+
+        </div>
+
+
+        <div class="intro-content">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-flask-vial"
+                   style="margin-right:6px;"></i>
+
+                MUSHROOM PRODUCTION
+
+            </span>
+
+
+            <h2>
+                Mushroom Conservation & Production
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-seedling"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                Mushroom production activities at Tel Amara
+                include the conservation and multiplication
+                of different mushroom species.
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-microscope"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                Activities also include mycelium and spawn
+                production, preparation of sterile culture
+                media and cultivation of different mushroom
+                species.
+
+            </p>
+
+
+            <div class="intro-highlight">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    26 different mushroom species are conserved
+                    and multiplied through the department's
+                    activities.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTIVITIES
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-list-check"
+                   style="margin-right:6px;"></i>
+
+                OUR ACTIVITIES
+
+            </span>
+
+
+            <h2>
+                Mushroom Production Activities
+            </h2>
+
+
+            <p>
+                The department works on mushroom conservation,
+                multiplication, laboratory culture and
+                cultivation.
+            </p>
+
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+
+            <!-- =================================================
+                 ACTIVITY 01
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    01
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </div>
+
+
+                <h3>
+                    Conservation & Multiplication
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-seedling"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Conservation and multiplication
+                    of different mushroom species.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-layer-group"
+                           style="margin-right:7px;"></i>
+
+                        Mushroom Collection
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-circle-check"
+                           style="margin-right:7px;"></i>
+
+                        A total of 26 different mushroom
+                        species are conserved and multiplied.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 02
+            ================================================== -->
+
+            <article class="activity-card featured">
+
+
+                <div class="activity-number">
+                    02
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-flask"></i>
+
+                </div>
+
+
+                <h3>
+                    Mycelium Production
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-microscope"
+                       style="margin-right:7px;"></i>
+
+                    Production of mycelium for
+                    mushroom multiplication and
+                    cultivation activities.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-vial"
+                           style="margin-right:7px;"></i>
+
+                        Laboratory Production
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-flask-vial"
+                           style="margin-right:7px;"></i>
+
+                        Mycelium is produced as part
+                        of the laboratory's mushroom
+                        production activities.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 03
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    03
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                </div>
+
+
+                <h3>
+                    Spawn Production
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-seedling"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Production of mushroom spawn
+                    for cultivation and multiplication.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-box-open"
+                           style="margin-right:7px;"></i>
+
+                        Production
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-circle-check"
+                           style="margin-right:7px;"></i>
+
+                        Spawn production supports the
+                        cultivation of different
+                        mushroom species.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 04
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    04
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-petri-dish"></i>
+
+                </div>
+
+
+                <h3>
+                    Sterile Culture Media
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-flask-vial"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Production of sterile culture
+                    medium test plates for air
+                    quality control.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-wind"
+                           style="margin-right:7px;"></i>
+
+                        Air Quality Control
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-shield-halved"
+                           style="margin-right:7px;"></i>
+
+                        Sterile culture plates are prepared
+                        for use in air quality monitoring.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 05
+            ================================================== -->
+
+            <article class="activity-card featured">
+
+
+                <div class="activity-number">
+                    05
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+
+                <h3>
+                    Mushroom Cultivation
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-leaf"
+                       style="margin-right:7px;"></i>
+
+                    Cultivation of different
+                    species of mushrooms.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-tractor"
+                           style="margin-right:7px;"></i>
+
+                        Cultivation Activities
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-seedling"
+                           style="margin-right:7px;"></i>
+
+                        Different mushroom species
+                        are cultivated as part of the
+                        department's production program.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTION AREAS
+===================================================== -->
+
+<section class="impact-section">
+
+    <div class="container">
+
+
+        <div class="impact-heading">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-flask"
+                   style="margin-right:6px;"></i>
+
+                PRODUCTION AREAS
+
+            </span>
+
+
+            <h2>
+                From Culture to Cultivation
+            </h2>
+
+
+            <p>
+                Mushroom production combines conservation,
+                laboratory preparation and cultivation
+                activities.
+            </p>
+
+
+        </div>
+
+
+
+        <div class="impact-grid">
+
+
+
+            <!-- 26 SPECIES -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+
+                <h3>
+                    26 Species
+                </h3>
+
+
+                <p>
+                    Conservation and multiplication
+                    of 26 different mushroom species.
+                </p>
+
+            </div>
+
+
+
+            <!-- MYCELIUM -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-microscope"></i>
+
+                </div>
+
+
+                <h3>
+                    Mycelium
+                </h3>
+
+
+                <p>
+                    Production of mycelium
+                    for mushroom propagation
+                    and cultivation.
+                </p>
+
+            </div>
+
+
+
+            <!-- SPAWN -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                </div>
+
+
+                <h3>
+                    Spawn
+                </h3>
+
+
+                <p>
+                    Production of mushroom
+                    spawn for cultivation.
+                </p>
+
+            </div>
+
+
+
+            <!-- CULTURE MEDIA -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-flask-vial"></i>
+
+                </div>
+
+
+                <h3>
+                    Culture Media
+                </h3>
+
+
+                <p>
+                    Production of sterile
+                    culture medium test plates
+                    for air quality control.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS SECTION
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-arrow-right-arrow-left"
+                   style="margin-right:6px;"></i>
+
+                PRODUCTION PROCESS
+
+            </span>
+
+
+            <h2>
+                Mushroom Production Process
+            </h2>
+
+
+            <p>
+                The department's activities cover
+                the main stages from conservation
+                to mushroom cultivation.
+            </p>
+
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+
+            <!-- STEP 1 -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    STEP 01
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-box-archive"></i>
+
+                </div>
+
+
+                <h3>
+                    Conservation
+                </h3>
+
+
+                <p>
+                    Conservation of different
+                    mushroom species.
+                </p>
+
+
+            </article>
+
+
+
+            <!-- STEP 2 -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    STEP 02
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-microscope"></i>
+
+                </div>
+
+
+                <h3>
+                    Mycelium Production
+                </h3>
+
+
+                <p>
+                    Production and multiplication
+                    of mushroom mycelium.
+                </p>
+
+
+            </article>
+
+
+
+            <!-- STEP 3 -->
+
+            <article class="activity-card featured">
+
+
+                <div class="activity-number">
+                    STEP 03
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-wheat-awn"></i>
+
+                </div>
+
+
+                <h3>
+                    Spawn Production
+                </h3>
+
+
+                <p>
+                    Preparation of mushroom
+                    spawn for cultivation.
+                </p>
+
+
+            </article>
+
+
+
+            <!-- STEP 4 -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    STEP 04
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                </div>
+
+
+                <h3>
+                    Cultivation
+                </h3>
+
+
+                <p>
+                    Cultivation of different
+                    mushroom species.
+                </p>
+
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STAFF
+===================================================== -->
+
+<section class="staff-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-users"
+                   style="margin-right:6px;"></i>
+
+                OUR TEAM
+
+            </span>
+
+
+            <h2>
+                Staff
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-user-group"
+                   style="
+                       color:#788533;
+                       margin-right:7px;
+                   ">
+                </i>
+
+                Meet the Mushroom Production team
+                at Tel Amara Station.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="staff-grid">
+
+
+
+            <!-- =================================================
+                 HEAD OF DEPARTMENT
+            ================================================== -->
+
+            <div class="staff-card staff-head">
+
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+
+                    <span class="staff-role">
+
+                        <i class="fa-solid fa-star"
+                           style="margin-right:5px;"></i>
+
+                        HEAD OF DEPARTMENT
+
+                    </span>
+
+
+                    <h3>
+                        Darine Haddad
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-seedling"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Head of Mushroom Production Department
+
+                    </p>
+
+
+                    <a href="mailto:dhaddad@lari.gov.lb">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        dhaddad@lari.gov.lb
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STAFF
+            ================================================== -->
+
+            <div class="staff-card">
+
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+
+                    <span class="staff-role">
+
+                        <i class="fa-solid fa-id-badge"
+                           style="margin-right:5px;"></i>
+
+                        STAFF
+
+                    </span>
+
+
+                    <h3>
+                        Lina Dirany
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-flask"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Mushroom Production Department
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="research-cta">
+
+    <div class="container">
+
+
+        <div class="cta-icon">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </div>
+
+
+        <h2>
+
+            <i class="fa-solid fa-seedling"
+               style="
+                   font-size:28px;
+                   margin-right:8px;
+               ">
+            </i>
+
+            Explore Tal Amara Station
+
+        </h2>
+
+
+        <p>
+
+            <i class="fa-solid fa-flask"
+               style="margin-right:7px;"></i>
+
+            Discover other laboratories,
+            research units and agricultural
+            activities at Tal Amara Station.
+
+        </p>
+
+
+        <a href="tel-amara.html"
+           class="cta-button">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Tal Amara Station
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="research-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h3>
+
+                <i class="fa-solid fa-seedling"
+                   style="margin-right:7px;"></i>
+
+                LARI
+
+            </h3>
+
+
+            <p>
+                Lebanese Agricultural Research Institute
+            </p>
+
+        </div>
+
+
+
+        
+
+    <div class="footer-container">
+
+
+
+        <!-- CONTACT + SOCIAL MEDIA -->
+        <div class="footer-links" style="margin-left: auto;">
+
+            <!-- LOCATION -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Tal+Amara+Bekaa+Lebanon"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-solid fa-location-dot"></i>
+                Bekaa - Tal Amara
+
+            </a>
+
+
+            <!-- PHONE -->
+            <a href="tel:+96108900047">
+
+                <i class="fa-solid fa-phone"></i>
+                +961 08 900 047
+
+            </a>
+
+            
+             <!-- LINKEDIN -->
+            <a href="YOUR_LINKEDIN_LINK"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/share/1BhZGqhteZ/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/leb_agricultural_institute?igsh=ZHFiNzBqemh6cHV4"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            <i class="fa-regular fa-copyright"></i>
+
+            2026 Lebanese Agricultural Research Institute.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       STATIONS DROPDOWN
+    ===================================================== */
+
+    const dropdown =
+        document.querySelector(".dropdown");
+
+
+    const dropdownToggle =
+        document.querySelector(".dropdown-toggle");
+
+
+    if (dropdown && dropdownToggle) {
+
+
+        dropdownToggle.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                dropdown.classList.toggle("open");
+
+            }
+        );
+
+
+        /* Close dropdown when clicking outside */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (!dropdown.contains(event.target)) {
+
+                    dropdown.classList.remove("open");
+
+                }
+
+            }
+        );
+
+
+    }
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

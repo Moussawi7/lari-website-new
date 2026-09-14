@@ -1,0 +1,4604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/x-icon"
+          href="icon.jpg">
+
+    <title>
+        Plant Protection | LARI
+    </title>
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CSS FILES
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="stations.css">
+
+          <!-- HEADER CSS: same as index.html and kept only inside this HTML file -->
+      <style>
+/* =========================================================
+   INDEX HEADER FOUNDATION
+   Keeps this header independent from aboutus.css
+========================================================= */
+
+.header {
+    --olive: #667A3E;
+    --olive-dark: #4F6230;
+    --olive-light: #EEF2E6;
+    --white: #FFFFFF;
+    --border: #E2E4DA;
+    --dark: #26301F;
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --transition: all 0.3s ease;
+
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header *,
+.header *::before,
+.header *::after {
+    box-sizing: border-box;
+}
+
+.header .container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header button {
+    font-family: inherit;
+}
+
+.main-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+    z-index: 1000;
+}.header-content {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}.logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}.navbar {
+    margin-left: auto;
+}.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}.nav-list > li {
+    position: relative;
+}.nav-list > li > a {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 12px 10px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}.nav-list > li > a:hover,
+.nav-list > li > a.active {
+    color: var(--olive);
+}.nav-list > li > a.active {
+    position: relative;
+}.nav-list > li > a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    right: 10px;
+    bottom: 2px;
+
+    height: 2px;
+
+    background-color: var(--olive);
+}.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    left: 0;
+
+    min-width: 220px;
+
+    background-color: var(--white);
+
+    border-top: 3px solid var(--olive);
+
+    box-shadow: var(--shadow-md);
+
+    border-radius: 0 0 8px 8px;
+
+    padding: 8px 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: var(--transition);
+}.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}.dropdown-menu li a {
+    display: block;
+
+    padding: 10px 18px;
+
+    color: var(--dark);
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}.dropdown-menu li a:hover {
+    background-color: var(--olive-light);
+
+    color: var(--olive-dark);
+
+    padding-left: 23px;
+}.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}.search-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+
+    background-color: var(--white);
+
+    border-radius: 50%;
+
+    color: var(--olive-dark);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}.search-btn:hover {
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-color: var(--olive);
+}.mobile-menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background-color: var(--olive);
+
+    color: var(--white);
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}@media (max-width: 1100px) {.nav-list {
+        gap: 0;
+    }.nav-list > li > a {
+        padding: 10px 7px;
+
+        font-size: 13px;
+    }}@media (max-width: 850px) {.header-content {
+        min-height: 75px;
+    }.logo img {
+        width: 52px;
+        height: 52px;
+    }.navbar {
+        display: none;
+    }.header-actions {
+        margin-left: auto;
+    }.mobile-menu-btn {
+        display: block;
+    }}@media (max-width: 600px) {.header-actions {
+        gap: 6px;
+    }.search-btn,
+    .mobile-menu-btn {
+        width: 38px;
+        height: 38px;
+    }}.profile-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+}.profile-title {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1f6b45;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}.profile-subtitle {
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    color: #666;
+
+    max-width: 210px;
+}@keyframes profileFlip {
+
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    45% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    95% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}@media (max-width: 1100px) {.profile-title {
+        font-size: 16px;
+    }.profile-subtitle {
+        font-size: 9px;
+    }}@media (max-width: 600px) {.header-profile-flip {
+        width: 180px;
+        height: 58px;
+    }.header-profile-front img,
+    .header-profile-back img {
+        width: 52px;
+        height: 52px;
+    }.profile-title {
+        font-size: 14px;
+    }.profile-subtitle {
+        font-size: 8px;
+    }}.language-switcher {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #ffffff;
+
+    padding: 5px 10px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}.lang-btn {
+    border: none;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 5px 8px;
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}.lang-btn:hover {
+    color: #1d6b3a;
+}.lang-btn.active {
+    background: #1d6b3a;
+
+    color: white;
+}.lang-divider {
+    color: #ccc;
+}html[dir="rtl"] .navbar {
+    margin-left: 0;
+
+    margin-right: auto;
+}html[dir="rtl"] .dropdown-menu {
+    left: auto;
+
+    right: 0;
+}html[dir="rtl"] .dropdown-menu li a:hover {
+    padding-left: 18px;
+
+    padding-right: 23px;
+}html[dir="rtl"] .lang-btn.active {
+    font-weight: bold;
+
+    color: var(--olive);
+}@media (max-width: 850px) {.header-content {
+        position: relative;
+    }.navbar {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: var(--white);
+
+        border-top:
+            1px solid var(--border);
+
+        box-shadow:
+            var(--shadow-md);
+
+        z-index: 3000;
+
+        max-height:
+            calc(100vh - 75px);
+
+        overflow-y: auto;
+    }.navbar.mobile-open {
+        display: block !important;
+    }.nav-list {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 0;
+
+        margin: 0;
+
+        padding: 8px 0;
+
+        background-color: var(--white);
+    }.nav-list > li {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+
+        border-bottom:
+            1px solid var(--border);
+    }.nav-list > li:last-child {
+        border-bottom: none;
+    }.nav-list > li > a {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        color:
+            var(--dark) !important;
+
+        background-color:
+            var(--white);
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.nav-list > li > a:hover {
+        background-color:
+            var(--olive-light);
+
+        color:
+            var(--olive-dark) !important;
+    }.nav-list > li > a.active::after {
+        display: none;
+    }.dropdown-menu {
+        position: static;
+
+        display: none;
+
+        width: 100%;
+
+        min-width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-top:
+            1px solid var(--border);
+
+        border-radius: 0;
+
+        background-color:
+            var(--olive-light);
+
+        transition: none;
+    }.dropdown:hover > .dropdown-menu {
+        display: none;
+    }.dropdown.open > .dropdown-menu,
+    .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }.dropdown > a > i {
+        transition:
+            transform 0.25s ease;
+    }.dropdown.open > a > i {
+        transform: rotate(180deg);
+    }.dropdown-menu li {
+        display: block;
+
+        width: 100%;
+    }.dropdown-menu li a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 30px;
+
+        color:
+            var(--dark) !important;
+
+        font-size: 14px;
+
+        opacity: 1 !important;
+
+        visibility: visible !important;
+    }.dropdown-menu li a:hover {
+        background-color: #dfe8cf;
+
+        color:
+            var(--olive-dark) !important;
+    }.mobile-menu-btn {
+        display: block;
+
+        position: relative;
+
+        z-index: 3100;
+
+        flex-shrink: 0;
+    }}@media (max-width: 850px) {html[dir="rtl"] .navbar {
+        left: 0;
+
+        right: 0;
+
+        margin: 0;
+    }html[dir="rtl"] .nav-list > li > a {
+        text-align: right;
+    }html[dir="rtl"] .dropdown-menu {
+        right: auto;
+
+        left: auto;
+    }html[dir="rtl"] .dropdown-menu li a {
+        text-align: right;
+
+        padding:
+            12px
+            30px;
+    }html[dir="rtl"]
+    .dropdown-menu li a:hover {
+        padding-left: 30px;
+
+        padding-right: 35px;
+    }}@media (max-width: 480px) {.header-content {
+        gap: 8px;
+    }.profile-title {
+        font-size: 13px;
+    }.profile-subtitle {
+        font-size: 7px;
+
+        max-width: 95px;
+
+        line-height: 1.2;
+    }.language-switcher {
+        gap: 3px;
+
+        padding: 4px 6px;
+    }.lang-btn {
+        font-size: 11px;
+
+        padding: 4px 5px;
+    }.mobile-menu-btn {
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 15px;
+    }}.share-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}.share-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: 50%;
+    color: var(--olive-dark);
+    cursor: pointer;
+    transition: var(--transition);
+}.share-btn:hover,
+.share-btn[aria-expanded="true"] {
+    background-color: var(--olive);
+    color: var(--white);
+    border-color: var(--olive);
+}.share-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: 245px;
+    padding: 16px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--olive);
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 3500;
+}.share-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}.share-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 14px;
+    width: 13px;
+    height: 13px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    transform: rotate(45deg);
+}.share-menu-title {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+}.share-socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}.share-option {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}.share-option:hover {
+    transform: translateY(-3px);
+    opacity: 0.88;
+}.share-option.whatsapp { background: #25D366; }.share-option.facebook { background: #1877F2; }.share-option.linkedin { background: #0A66C2; }.share-option.instagram {
+    background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);
+}.share-copy-row {
+    margin-top: 13px;
+    padding: 9px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--olive-light);
+    border-radius: 7px;
+}.share-copy-text {
+    color: var(--olive-dark);
+    font-size: 12px;
+    font-weight: 700;
+}.share-copy-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--olive-dark);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition);
+}.share-copy-btn:hover {
+    background: var(--olive);
+    color: var(--white);
+}html[dir="rtl"] .share-menu {
+    right: auto;
+    left: 0;
+}html[dir="rtl"] .share-menu::before {
+    right: auto;
+    left: 14px;
+}@media (max-width: 600px) {.share-btn {
+        width: 38px;
+        height: 38px;
+    }.share-menu {
+        position: fixed;
+        top: 88px;
+        right: 4%;
+        left: auto;
+        width: min(245px, 92vw);
+    }.share-menu::before {
+        display: none;
+    }html[dir="rtl"] .share-menu {
+        right: auto;
+        left: 4%;
+    }}@media (max-width: 480px) {.share-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }.share-menu {
+        top: 82px;
+    }}
+    
+
+/* IMPORTANT: keep header dropdowns independent from page dropdown CSS */
+.header .navbar .dropdown-menu {
+    display: block;
+    bottom: auto;
+    white-space: normal;
+}
+
+@media (max-width: 850px) {
+    .header .navbar .dropdown-menu {
+        display: none;
+    }
+
+    .header .navbar .dropdown.open > .dropdown-menu,
+    .header .navbar .dropdown.open:hover > .dropdown-menu {
+        display: block !important;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+        <!-- Main Header -->
+        <div class="main-header">
+
+            <div class="container header-content">
+
+
+                <!-- =================================================
+     LARI LOGO
+================================================== -->
+
+<a href="index.html" class="logo">
+
+    <img src="icon.jpg"
+         alt="LARI Logo">
+
+    <div class="profile-text">
+
+        <span class="profile-title"
+              data-i18n="profileTitle">
+            LARI
+        </span>
+
+        <span class="profile-subtitle"
+              data-i18n="profileSubtitle">
+            Lebanese Agricultural Research Institute
+        </span>
+
+    </div>
+
+</a>
+
+
+
+                <!-- =================================================
+                     NAVIGATION
+                ================================================== -->
+
+                <nav class="navbar" id="main-navigation">
+
+                    <ul class="nav-list">
+
+
+                        <!-- HOME -->
+
+                        <li>
+
+                            <a href="index.html"
+                               data-i18n="navHome">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             ABOUT US
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#">
+
+                                <span data-i18n="navAboutus">
+                                    About us
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+
+                                    <a href="aboutus.html"
+                                       data-i18n="navWhoWeAre">
+
+                                        Who We Are
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="history.html"
+                                       data-i18n="navHistory">
+
+                                        History
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="mission.html"
+                                       data-i18n="navMission">
+
+                                        Mission & Vision
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a href="pdg.html"
+                                       data-i18n="navpdg">
+
+                                        P.D.G of LARI
+
+                                    </a>
+
+                                </li>
+
+
+                                
+                            </ul>
+
+                        </li>
+
+
+
+                         <!-- =================================================
+                             RESEARCH
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navResearch">
+
+            Research
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Current Research -->
+
+        <li>
+
+            <a href="current-research.html"
+               data-i18n="navCurrentResearchh">
+
+                Current Research
+
+            </a>
+
+        </li>
+
+
+        <!-- PUBLICATIONS -->
+
+        <li>
+
+            <a href="publications.html"
+               data-i18n="navPublications">
+
+                Publications
+
+            </a>
+
+        </li>
+
+
+        <!-- EUROPEAN & INTERNATIONAL PROJECTS -->
+
+        <li>
+
+            <a href="european-projects.html"
+               data-i18n="navEuropeanProjects">
+
+                European & International Projects
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             SERVICES
+                        ================================================== -->
+
+                       
+
+<li class="dropdown">
+
+    <a href="#">
+
+        <span data-i18n="navServices">
+
+            Services
+
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+    <ul class="dropdown-menu">
+
+
+        <!-- Soil Test-->
+
+        <li>
+
+            <a href="soil-lab.html"
+               data-i18n="navSoilTest">
+
+                Soil Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Water Test -->
+
+        <li>
+
+            <a href="water-unit.html"
+               data-i18n="navWaterTest">
+
+                Water Test
+
+            </a>
+
+        </li>
+
+
+        <!-- Food Test -->
+
+        <li>
+
+            <a href="food-microbiology.html"
+               data-i18n="navFoodTest">
+
+                Food Test
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</li>
+
+
+
+                        <!-- =================================================
+                             STATIONS
+                        ================================================== -->
+
+                        <li class="dropdown">
+
+                            <a href="#" class="active">
+
+                                <span data-i18n="navStations">
+                                    Stations
+                                </span>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+                                    <a href="tel-amara.html">
+                                        Tal Amara
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="lebaa.html">
+                                        Lebaa
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="tyre.html">
+                                        Tyre
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="fanar.html">
+                                        Fanar
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="kfarshakhna.html">
+                                        Kfarshakhna
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="abdeh.html">
+                                        Abdeh
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hasbaya.html">
+                                        Hasbaya
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="keserwan.html">
+                                        Keserwan
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="baakline.html">
+                                        Baakline
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="terbol.html">
+                                        Terbol
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="hermel.html">
+                                        Hermel
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="kfarden.html">
+                                        Kfarden
+                                    </a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             CONTACT
+                        ================================================== -->
+
+                        <li>
+
+                            <a href="contact.html"
+                               data-i18n="navContactUs">
+
+                                Contact us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </nav>
+
+
+
+                <!-- =================================================
+                     HEADER ACTIONS
+                ================================================== -->
+
+                <div class="header-actions">
+
+
+                    <!-- SEARCH -->
+
+                    <button class="search-btn"
+                            aria-label="Search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+
+                    <!-- SHARE -->
+
+                    <div class="share-wrapper">
+
+                        <button class="share-btn"
+                                id="shareButton"
+                                type="button"
+                                aria-label="Share this page"
+                                aria-expanded="false"
+                                aria-controls="shareMenu">
+
+                            <i class="fa-solid fa-share-nodes"></i>
+
+                        </button>
+
+
+                        <div class="share-menu"
+                             id="shareMenu"
+                             role="menu"
+                             aria-label="Share this page">
+
+                            <span class="share-menu-title">Share this page</span>
+
+                            <div class="share-socials">
+
+                                <button class="share-option whatsapp"
+                                        type="button"
+                                        data-share="whatsapp"
+                                        aria-label="Share on WhatsApp"
+                                        title="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </button>
+
+                                <button class="share-option facebook"
+                                        type="button"
+                                        data-share="facebook"
+                                        aria-label="Share on Facebook"
+                                        title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </button>
+
+                                <button class="share-option linkedin"
+                                        type="button"
+                                        data-share="linkedin"
+                                        aria-label="Share on LinkedIn"
+                                        title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </button>
+
+                                <button class="share-option instagram"
+                                        type="button"
+                                        data-share="instagram"
+                                        aria-label="Copy link for Instagram"
+                                        title="Copy link for Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="share-copy-row">
+                                <span class="share-copy-text" id="shareCopyText">Copy link</span>
+                                <button class="share-copy-btn"
+                                        type="button"
+                                        id="copyShareLink"
+                                        aria-label="Copy page link">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LANGUAGE SWITCHER -->
+
+                    <div class="language-switcher">
+
+                        <button class="lang-btn active"
+                                id="englishBtn"
+                                onclick="changeLanguage('en')">
+
+                            EN
+
+                        </button>
+
+
+                        <span class="lang-divider">
+
+                            |
+
+                        </span>
+
+
+                        <button class="lang-btn"
+                                id="arabicBtn"
+                                onclick="changeLanguage('ar')">
+
+                            العربية
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="mobile-menu-btn"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="research-hero">
+
+    <div class="hero-decoration"></div>
+
+
+    <div class="hero-content">
+
+
+        <span class="hero-label">
+
+            <i class="fa-solid fa-location-dot"
+               style="margin-right: 7px;"></i>
+
+            TAL AMARA STATION
+
+        </span>
+
+
+        <h1>
+
+            Plant
+
+            <span>
+                Protection
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            <i class="fa-solid fa-shield-halved"
+               style="
+                   color:#aeb85a;
+                   margin-right:8px;
+               ">
+            </i>
+
+            Protecting Lebanon's strategic crops through
+            disease detection, plant pathology research,
+            phytosanitary monitoring and improved
+            disease-management strategies.
+
+        </p>
+
+
+        <div class="hero-line"></div>
+
+
+        <div class="hero-tags">
+
+
+            <span>
+
+                <i class="fa-solid fa-shield-virus"></i>
+
+                Plant Health
+
+            </span>
+
+
+            <span>
+
+                <i class="fa-solid fa-microscope"></i>
+
+                Diagnostics
+
+            </span>
+
+
+            <span>
+
+                <i class="fa-solid fa-bug"></i>
+
+                Pest Management
+
+            </span>
+
+
+            <span>
+
+                <i class="fa-solid fa-flask"></i>
+
+                Plant Pathology
+
+            </span>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="introduction">
+
+    <div class="container">
+
+
+        <div class="intro-icon">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+        </div>
+
+
+
+        <div class="intro-content">
+
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-leaf"
+                   style="margin-right:6px;"></i>
+
+                PLANT PROTECTION DEPARTMENT
+
+            </span>
+
+
+            <h2>
+                Protecting Crops & Plant Health
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-virus"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                The Plant Protection Department focuses on the
+                detection and identification of viruses,
+                phytoplasmas, bacteria and fungi that infect
+                strategic fruit crops and vegetables in Lebanon.
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-shield-halved"
+                   style="
+                       color:#788533;
+                       margin-right:8px;
+                   ">
+                </i>
+
+                The department also develops improved management
+                strategies for these diseases in order to reduce
+                agricultural crop losses and protect plant health.
+
+            </p>
+
+
+            <div class="intro-highlight">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Combining field inspection, laboratory
+                    diagnostics and disease management to
+                    protect Lebanon's agricultural production.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACTIVITIES
+===================================================== -->
+
+<section class="activities-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-flask"
+                   style="margin-right:6px;"></i>
+
+                OUR ACTIVITIES
+
+            </span>
+
+
+            <h2>
+                Plant Protection Activities
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-microscope"
+                   style="
+                       color:#788533;
+                       margin-right:7px;
+                   ">
+                </i>
+
+                Research activities cover crop health surveys,
+                disease identification, certification,
+                quarantine diseases, pest management
+                and climate-related plant health risks.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+
+            <!-- =================================================
+                 ACTIVITY 01
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    01
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+
+                <h3>
+                    Phytosanitary Evaluation
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-seedling"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Evaluation of the sanitary status of
+                    major strategic crops and fruit trees
+                    throughout Lebanon.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-wheat-awn"
+                           style="margin-right:7px;"></i>
+
+                        Crops & Fruit Trees
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-leaf"
+                           style="margin-right:7px;"></i>
+
+                        Potato, wheat, tomato, pepper, bean,
+                        sugar beet, cucurbit crops, olives,
+                        stone fruits, pome fruits,
+                        grapevine and citrus.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 02
+            ================================================== -->
+
+            <article class="activity-card featured">
+
+
+                <div class="activity-number">
+                    02
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-microscope"></i>
+
+                </div>
+
+
+                <h3>
+                    Disease Diagnosis
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-virus"
+                       style="margin-right:7px;"></i>
+
+                    Identification and characterization of
+                    viral and phytoplasma diseases and
+                    their causal agents.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-vials"
+                           style="margin-right:7px;"></i>
+
+                        Diagnostic Methods
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-microscope"
+                           style="margin-right:7px;"></i>
+
+                        Biological assays, serological assays,
+                        electron microscopy, ELISA, DTBIA,
+                        PCR, RFLP, molecular hybridization,
+                        dsRNA and real-time LAMP.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 03
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    03
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-bacteria"></i>
+
+                </div>
+
+
+                <h3>
+                    Bacterial & Fungal Diseases
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-bacteria"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Identification of bacterial and fungal
+                    plant diseases using modern laboratory
+                    diagnostic procedures.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-flask-vial"
+                           style="margin-right:7px;"></i>
+
+                        Laboratory Techniques
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-microscope"
+                           style="margin-right:7px;"></i>
+
+                        Isolation techniques, serological
+                        assays, molecular methods and
+                        pathogenicity tests.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 04
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    04
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                </div>
+
+
+                <h3>
+                    Plant Certification
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-circle-check"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Supporting certification activities for
+                    healthy and reliable agricultural
+                    propagation material.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-certificate"
+                           style="margin-right:7px;"></i>
+
+                        Certification
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-seedling"
+                           style="margin-right:7px;"></i>
+
+                        Activities include the production
+                        of certified plant propagation
+                        material and plant-health assessment.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 05
+            ================================================== -->
+
+            <article class="activity-card featured">
+
+
+                <div class="activity-number">
+                    05
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+
+                <h3>
+                    Emerging & Quarantine Diseases
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-triangle-exclamation"
+                       style="margin-right:7px;"></i>
+
+                    Monitoring emerging and quarantine
+                    diseases threatening Mediterranean
+                    fruit and vegetable crops.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-shield-virus"
+                           style="margin-right:7px;"></i>
+
+                        Important Threats
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-virus"
+                           style="margin-right:7px;"></i>
+
+                        Potato brown rot and ring rot,
+                        fire blight, Plum pox virus,
+                        phytoplasma diseases and
+                        Xylella fastidiosa.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 06
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    06
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-bug-slash"></i>
+
+                </div>
+
+
+                <h3>
+                    Integrated Pest Management
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-bug-slash"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Supporting Integrated Pest Management
+                    approaches for sustainable control
+                    of agricultural pests and diseases.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-shield-halved"
+                           style="margin-right:7px;"></i>
+
+                        IPM
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-leaf"
+                           style="margin-right:7px;"></i>
+
+                        Developing management approaches
+                        designed to reduce agricultural
+                        damage while supporting sustainable
+                        crop production.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 07
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    07
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-cloud-sun"></i>
+
+                </div>
+
+
+                <h3>
+                    Climate Change & Plant Health
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-temperature-half"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Studying the potential impact of
+                    climate change on agricultural pests,
+                    diseases and plant-health risks.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-cloud-sun"
+                           style="margin-right:7px;"></i>
+
+                        Research Focus
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-temperature-half"
+                           style="margin-right:7px;"></i>
+
+                        Understanding how changing
+                        environmental conditions may influence
+                        disease development and agricultural
+                        pest populations.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ACTIVITY 08
+            ================================================== -->
+
+            <article class="activity-card">
+
+
+                <div class="activity-number">
+                    08
+                </div>
+
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-earth-europe"></i>
+
+                </div>
+
+
+                <h3>
+                    International Collaboration
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-globe"
+                       style="
+                           color:#788533;
+                           margin-right:7px;
+                       ">
+                    </i>
+
+                    Disease epidemiology and characterization
+                    are conducted in collaboration with
+                    European research institutes and universities.
+
+                </p>
+
+
+                <div class="activity-details">
+
+                    <strong>
+
+                        <i class="fa-solid fa-handshake"
+                           style="margin-right:7px;"></i>
+
+                        Collaboration
+
+                    </strong>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-earth-europe"
+                           style="margin-right:7px;"></i>
+
+                        International cooperation supports
+                        advanced diagnostics, epidemiological
+                        research and characterization of
+                        important plant diseases.
+
+                    </span>
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH IMPACT
+===================================================== -->
+
+<section class="impact-section">
+
+    <div class="container">
+
+
+        <div class="impact-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-bullseye"
+                   style="margin-right:6px;"></i>
+
+                RESEARCH FOCUS
+
+            </span>
+
+
+            <h2>
+                Protecting Lebanon's Agricultural Production
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-shield-halved"
+                   style="
+                       color:#788533;
+                       margin-right:7px;
+                   ">
+                </i>
+
+                Plant protection research provides the
+                scientific information needed to detect
+                plant diseases early, reduce agricultural
+                losses and support healthier crop production.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="impact-grid">
+
+
+            <!-- EARLY DETECTION -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-microscope"></i>
+
+                </div>
+
+                <h3>
+                    Early Detection
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-magnifying-glass"
+                       style="
+                           color:#788533;
+                           margin-right:5px;
+                       ">
+                    </i>
+
+                    Identifying plant pathogens through
+                    advanced laboratory diagnostic methods.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- DISEASE PREVENTION -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-shield-virus"></i>
+
+                </div>
+
+                <h3>
+                    Disease Prevention
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-shield-halved"
+                       style="
+                           color:#788533;
+                           margin-right:5px;
+                       ">
+                    </i>
+
+                    Supporting strategies to limit the
+                    spread and impact of plant diseases.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CERTIFICATION -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                </div>
+
+                <h3>
+                    Certified Material
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-circle-check"
+                       style="
+                           color:#788533;
+                           margin-right:5px;
+                       ">
+                    </i>
+
+                    Contributing to the production
+                    of healthy certified plant
+                    propagation material.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SUSTAINABLE PROTECTION -->
+
+            <div class="impact-card">
+
+                <div class="impact-icon">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                </div>
+
+                <h3>
+                    Sustainable Protection
+                </h3>
+
+                <p>
+
+                    <i class="fa-solid fa-seedling"
+                       style="
+                           color:#788533;
+                           margin-right:5px;
+                       ">
+                    </i>
+
+                    Supporting integrated and sustainable
+                    approaches to crop protection.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STAFF
+===================================================== -->
+
+<section class="staff-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-users"
+                   style="margin-right:6px;"></i>
+
+                OUR TEAM
+
+            </span>
+
+
+            <h2>
+                Staff
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-user-group"
+                   style="
+                       color:#788533;
+                       margin-right:7px;
+                   ">
+                </i>
+
+                Meet the researchers and technical staff
+                of the Plant Protection Department.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="staff-grid">
+
+
+            <!-- =================================================
+                 HEAD
+            ================================================== -->
+
+            <div class="staff-card staff-head">
+
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+
+                    <span class="staff-role">
+
+                        <i class="fa-solid fa-star"
+                           style="margin-right:5px;"></i>
+
+                        HEAD OF DEPARTMENT
+
+                    </span>
+
+
+                    <h3>
+                        Dr. Elia CHOUEIRI
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-virus"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Head Department and Researcher
+                        in Plant Pathology / Plant Virology
+
+                    </p>
+
+
+                    <a href="mailto:echoueiri@lari.gov.lb">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        echoueiri@lari.gov.lb
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FOUAD
+            ================================================== -->
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+                    <h3>
+                        Eng. Fouad JREIJIRI
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-flask"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Assistant Researcher
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SOUHEIR
+            ================================================== -->
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+                    <h3>
+                        Eng. Souheir El ZAMMAR
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-microscope"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Assistant Researcher (MSc)
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SAMER
+            ================================================== -->
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+                    <h3>
+                        Eng. Samer WAKIM
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-flask"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Assistant Researcher
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ZEINAB
+            ================================================== -->
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+                    <h3>
+                        Mme Zeinab CHAALAN
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-microscope"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Laboratory Technician
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DIANA
+            ================================================== -->
+
+            <div class="staff-card">
+
+                <div class="staff-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <div class="staff-info">
+
+                    <h3>
+                        Mme Diana ABOU YAGHI
+                    </h3>
+
+                    <p>
+
+                        <i class="fa-solid fa-clipboard"
+                           style="
+                               color:#788533;
+                               margin-right:6px;
+                           ">
+                        </i>
+
+                        Administrative Officer
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PUBLICATIONS
+===================================================== -->
+
+<section class="publications-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="fa-solid fa-book-open"
+                   style="margin-right:6px;"></i>
+
+                SCIENTIFIC OUTPUT
+
+            </span>
+
+
+            <h2>
+                Publications
+            </h2>
+
+
+            <p>
+
+                <i class="fa-solid fa-book"
+                   style="
+                       color:#788533;
+                       margin-right:7px;
+                   ">
+                </i>
+
+                Scientific publications related to plant
+                pathology, virology, phytoplasmas,
+                bacterial diseases, fungal diseases
+                and crop protection.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="publications-list">
+
+
+
+            <!-- =================================================
+                 PUBLICATION 1
+            ================================================== -->
+
+            <article class="publication">
+
+
+                <span class="publication-year">
+
+                    <i class="fa-solid fa-calendar"
+                       style="
+                           font-size:11px;
+                           margin-right:4px;
+                       ">
+                    </i>
+
+                    2019
+
+                </span>
+
+
+                <div>
+
+
+                    <h3>
+
+                        <i class="fa-solid fa-book-open"
+                           style="
+                               color:#788533;
+                               margin-right:8px;
+                           ">
+                        </i>
+
+                        Looking for wild plant reservoirs and
+                        potential insect vectors for
+                        ‘Candidatus Phytoplasma solani’
+                        in bois noir-affected vineyards
+                        in Bekaa Valley, Lebanon
+
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-users"
+                           style="
+                               color:#9aa35f;
+                               margin-right:7px;
+                           ">
+                        </i>
+
+                        Choueiri E., Salar P., Jreijiri F.,
+                        Wakim S., Danet J.L., Foissac X.
+
+                        <br>
+
+                        <i class="fa-solid fa-book"
+                           style="
+                               color:#9aa35f;
+                               margin-right:7px;
+                               margin-top:7px;
+                           ">
+                        </i>
+
+                        Phytopathogenic Mollicutes.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PUBLICATION 2
+            ================================================== -->
+
+            <article class="publication">
+
+
+                <span class="publication-year">
+
+                    <i class="fa-solid fa-calendar"
+                       style="
+                           font-size:11px;
+                           margin-right:4px;
+                       ">
+                    </i>
+
+                    2019
+
+                </span>
+
+
+                <div>
+
+
+                    <h3>
+
+                        <i class="fa-solid fa-book-open"
+                           style="
+                               color:#788533;
+                               margin-right:8px;
+                           ">
+                        </i>
+
+                        First report of a
+                        ‘Candidatus Phytoplasma phoenicium’-related
+                        strain on almond in Southern Italy
+
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-users"
+                           style="
+                               color:#9aa35f;
+                               margin-right:7px;
+                           ">
+                        </i>
+
+                        Nigro F., Sion V., Antelmi I.,
+                        Choueiri E., Habib W.,
+                        Bruno A., Boscia D.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PUBLICATION 3
+            ================================================== -->
+
+            <article class="publication">
+
+
+                <span class="publication-year">
+
+                    <i class="fa-solid fa-calendar"
+                       style="
+                           font-size:11px;
+                           margin-right:4px;
+                       ">
+                    </i>
+
+                    2018
+
+                </span>
+
+
+                <div>
+
+
+                    <h3>
+
+                        <i class="fa-solid fa-book-open"
+                           style="
+                               color:#788533;
+                               margin-right:8px;
+                           ">
+                        </i>
+
+                        A ‘Candidatus Phytoplasma omanense’-related
+                        strain detected in yellowing grapevine,
+                        stunted bindweed and Cixiidae planthoppers
+                        in Lebanon
+
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-users"
+                           style="
+                               color:#9aa35f;
+                               margin-right:7px;
+                           ">
+                        </i>
+
+                        Foissac X., Jreijiri F., Salar P.,
+                        Wakim S., Danet J.L., Choueiri E.
+
+                        <br>
+
+                        <i class="fa-solid fa-book"
+                           style="
+                               color:#9aa35f;
+                               margin-right:7px;
+                               margin-top:7px;
+                           ">
+                        </i>
+
+                        European Journal of Plant Pathology.
+
+                    </p>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- =================================================
+                 HIDDEN PUBLICATIONS
+            ================================================== -->
+
+            <div id="morePublications"
+                 style="display:none;">
+
+
+
+                <!-- 2018 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+
+                        <i class="fa-solid fa-calendar"
+                           style="font-size:11px; margin-right:4px;"></i>
+
+                        2018
+
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Long Distance Spread of Verticillium dahliae
+                            Through Rivers and Irrigation Systems
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Baroudy F., Habib W., Tanos G.,
+                            Gerges E., Saab C., Choueiri E.,
+                            Nigro F.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Plant Disease.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2017 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+
+                        <i class="fa-solid fa-calendar"
+                           style="font-size:11px; margin-right:4px;"></i>
+
+                        2017
+
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Surveys of Potato-Growing Areas and Surface
+                            Water in Lebanon for Detection of Potato
+                            Brown and Ring Rots
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E., Jreijiri F., Wakim S.,
+                            Issa el Khoury M., Valentini F.,
+                            Dubla N., Galli D., Habchy R.,
+                            Akl K., Stefani E.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2017
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            First Report on the Occurrence
+                            of Grapevine Leafroll-associated
+                            Virus-4 Strain 6 in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E., Jreijiri F.,
+                            Habib W., Abou Kubaa R.,
+                            Elbeaino T.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Plant Disease 101:1066.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2017
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Work Done and Actions Taken
+                            on Xylella fastidiosa in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-user"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Xylella fastidiosa & the
+                            Olive Quick Decline Syndrome.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2017
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            First Record of Olive Pyralid Moth,
+                            Euzophera pinguis, on Olive Trees
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Moussa Z., Choueiri E.,
+                            Youssef A., El Riachy M.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2016 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2016
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Xylella fastidiosa Does Not Occur
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Habib W., Nigro F., Gerges E.,
+                            Jreijiri F., Al Masri Y.,
+                            El Riachy M., Choueiri E.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Journal of Phytopathology.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2016
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Detection of Polymyxa betae
+                            and Soil-Borne Viruses in Sugar Beet
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Mouhanna A.M.,
+                            Dibeh L.S.,
+                            Choueiri E.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Arab Journal of Plant Protection.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2015 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2015
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Removal of Viruses from Lebanese
+                            Fig Varieties Using Tissue Culture
+                            and Thermotherapy
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Chalak L., Elbeaino T.,
+                            Elbitar A., Fattal T.,
+                            Choueiri E.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2015
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Almond Witches' Broom Phytoplasma:
+                            An Emerging Lethal Disease of Stone Fruits
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Abou-Jawdah Y., Jawhari M.,
+                            Choueiri E., Bianco P.A.,
+                            Alma A., Molino Lova M.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2015
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Diaporthe foeniculina Associated
+                            with Severe Shoot Blight
+                            of Lemon in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Habib W., Gerges E.,
+                            Antelmi I., Baroudy F.,
+                            Choueiri E., Nigro F.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2014 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2014
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Fungal Community Associated
+                            with Grapevine Wood Lesions
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E., Jreijiri F.,
+                            Chlela P., Mayet V.,
+                            Comont G., Liminana J.M.,
+                            Mostert L., Fischer M.,
+                            Lecomte P.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2013 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2013
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Elimination of Grapevine Bois Noir
+                            Phytoplasma by Tissue Culture
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Chalak L., Elbitar A.,
+                            Mourad N., Mortada C.,
+                            Choueiri E.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2012 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2012
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Survey on Fig Viruses
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Elbeaino T.,
+                            Mortada C.,
+                            Choueiri E.,
+                            Digiaro M.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2011 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2011
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Almond Witches'-Broom Phytoplasma:
+                            Situation in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Abou Jawdah Y.,
+                            Choueiri E.,
+                            Bianco P.A.,
+                            Molino-Lova M.
+                            and collaborators.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2009 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2009
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Current Status of Citrus
+                            Tristeza Virus in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-user"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Options Méditerranéennes.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2008 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2008
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Incidence of Viruses and Nematode
+                            Vectors in Lebanese Vineyards
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Hanna E., Digiaro M.,
+                            Elbeaino T., Choueiri E.,
+                            Jawhar J., Martelli G.P.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2007 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2007
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            First Report and Characterization
+                            of Pear Decline Phytoplasmas
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E., Salar P.,
+                            Jreijiri F., El Zammar S.,
+                            Danet J.L., Xavier F.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2006 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2006
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Plum Pox Virus in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-user"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.
+
+                            <br>
+
+                            <i class="fa-solid fa-book"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            EPPO Bulletin.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2005 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2005
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Presence and Distribution
+                            of Olive Viruses in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Fadel C., Digiaro M.,
+                            Choueiri E., El Beaino T.,
+                            Saponari M., Savino V.,
+                            Martelli G.P.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2004 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2004
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Phytosanitary Status of Potato
+                            in Bekaa Valley in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E., El-Zammar S.,
+                            Jreijiri F., Mnayer D.,
+                            Massaad R., Saad A.T.,
+                            Hanna L., Varveri C.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2003 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2003
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Viruses of Stone Fruit Trees
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.,
+                            Abou Ghanem-Sabanadzovic N.,
+                            El Zammar S.,
+                            Jreijiri F.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2002 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2002
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Records of Potato Viruses
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.,
+                            El-Zammar S.,
+                            Jreijiri F.,
+                            Saad A.T.,
+                            Afram M.A.,
+                            Varveri C.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2001 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2001
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Occurrence and Distribution
+                            of Sugar Beet Viruses
+                            in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E., Younis H.,
+                            Saad A., Issa A.,
+                            Hanna L., Hajj Hassan S.,
+                            El Tackach T.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 2000 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        2000
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Ultrastructure of Grapevine
+                            Leafroll-Associated Virus
+                            2 and 7 Infections
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Castellano M.A.,
+                            Abou Ghanem N.,
+                            Choueiri E.,
+                            Martelli G.P.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1999 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        1999
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Distribution and Host Range
+                            of the First Serious Outbreak
+                            of Fire Blight in Lebanon
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Saad A.T.,
+                            Hanna L.,
+                            Asly O.J.,
+                            Choueiri E.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1998 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        1998
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Serological Characterisation
+                            of Prunus Necrotic Ringspot
+                            Virus Isolates
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Di Terlizzi B.,
+                            Boscia D.,
+                            Savino V.,
+                            Choueiri E.
+                            and collaborators.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1997 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        1997
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Grapevine Virus A and Grapevine
+                            Virus D Are Serologically
+                            Distantly Related
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.,
+                            Abou-Ghanem N.,
+                            Boscia D.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1996 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        1996
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Properties of a Filamentous
+                            Virus of Grapevine
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.,
+                            Boscia D.,
+                            Digiaro M.,
+                            Castellano M.A.,
+                            Martelli G.P.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1994 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        1994
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            Occurrence of Filamentous Viruses
+                            and Rugose Wood of Grapevine
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Martelli G.P.,
+                            Boscia D.,
+                            Choueiri E.,
+                            Digiaro M.,
+                            Castellano M.A.,
+                            Savino V.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 1993 -->
+
+                <article class="publication">
+
+                    <span class="publication-year">
+                        1993
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+
+                            <i class="fa-solid fa-book-open"
+                               style="color:#788533; margin-right:8px;"></i>
+
+                            A Survey of Peach Viruses
+                            in Apulia
+
+                        </h3>
+
+
+                        <p>
+
+                            <i class="fa-solid fa-users"
+                               style="color:#9aa35f; margin-right:7px;"></i>
+
+                            Choueiri E.,
+                            Digiaro M.,
+                            Minafra A.,
+                            Savino V.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SHOW MORE BUTTON
+            ================================================== -->
+
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                margin-top:40px;
+            ">
+
+
+                <button
+
+                    type="button"
+
+                    id="showMorePublications"
+
+                    aria-expanded="false"
+
+                    style="
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content:center;
+                        gap:10px;
+
+                        padding:14px 30px;
+
+                        border:none;
+                        border-radius:30px;
+
+                        background:#68752d;
+                        color:#ffffff;
+
+                        font-family:
+                            Arial,
+                            Helvetica,
+                            sans-serif;
+
+                        font-size:14px;
+                        font-weight:600;
+
+                        cursor:pointer;
+
+                        box-shadow:
+                            0 8px 20px
+                            rgba(55,72,30,0.18);
+
+                        transition:
+                            background 0.3s ease,
+                            transform 0.3s ease,
+                            box-shadow 0.3s ease;
+                    "
+
+                    onmouseover="
+                        this.style.background='#7d8b38';
+                        this.style.transform='translateY(-2px)';
+                        this.style.boxShadow=
+                        '0 12px 25px rgba(55,72,30,0.25)';
+                    "
+
+                    onmouseout="
+                        this.style.background='#68752d';
+                        this.style.transform='translateY(0)';
+                        this.style.boxShadow=
+                        '0 8px 20px rgba(55,72,30,0.18)';
+                    "
+                >
+
+
+                    <i class="fa-solid fa-book-open"></i>
+
+
+                    <span id="publicationButtonText">
+
+                        Show More Publications
+
+                    </span>
+
+
+                    <i
+                        id="publicationButtonIcon"
+
+                        class="fa-solid fa-chevron-down"
+
+                        style="
+                            font-size:11px;
+                            transition:
+                                transform 0.3s ease;
+                        ">
+                    </i>
+
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="research-cta">
+
+    <div class="container">
+
+
+        <div class="cta-icon">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </div>
+
+
+        <h2>
+
+            <i class="fa-solid fa-seedling"
+               style="
+                   font-size:28px;
+                   margin-right:8px;
+               ">
+            </i>
+
+            Explore Tal Amara Station
+
+        </h2>
+
+
+        <p>
+
+            <i class="fa-solid fa-flask"
+               style="margin-right:7px;"></i>
+
+            Discover other laboratories,
+            research units and agricultural
+            activities at Tal Amara Station.
+
+        </p>
+
+
+        <a href="tel-amara.html"
+           class="cta-button">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Tal Amara Station
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="research-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h3>
+
+                <i class="fa-solid fa-seedling"
+                   style="margin-right:7px;"></i>
+
+                LARI
+
+            </h3>
+
+
+            <p>
+                Lebanese Agricultural Research Institute
+            </p>
+
+        </div>
+
+
+
+        
+
+    <div class="footer-container">
+
+
+
+        <!-- CONTACT + SOCIAL MEDIA -->
+        <div class="footer-links" style="margin-left: auto;">
+
+            <!-- LOCATION -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Tal+Amara+Bekaa+Lebanon"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <i class="fa-solid fa-location-dot"></i>
+                Bekaa - Tal Amara
+
+            </a>
+
+
+            <!-- PHONE -->
+            <a href="tel:+96108900047">
+
+                <i class="fa-solid fa-phone"></i>
+                +961 08 900 047
+
+            </a>
+
+            
+             <!-- LINKEDIN -->
+            <a href="YOUR_LINKEDIN_LINK"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/share/1BhZGqhteZ/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/leb_agricultural_institute?igsh=ZHFiNzBqemh6cHV4"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            <i class="fa-regular fa-copyright"></i>
+
+            2026 Lebanese Agricultural Research Institute.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       STATIONS DROPDOWN
+    ===================================================== */
+
+    const dropdown =
+        document.querySelector(".dropdown");
+
+
+    const dropdownToggle =
+        document.querySelector(".dropdown-toggle");
+
+
+    if (dropdown && dropdownToggle) {
+
+
+        dropdownToggle.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                dropdown.classList.toggle("open");
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (!dropdown.contains(event.target)) {
+
+                    dropdown.classList.remove("open");
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       SHOW MORE PUBLICATIONS
+    ===================================================== */
+
+    const showMoreButton =
+        document.getElementById(
+            "showMorePublications"
+        );
+
+
+    const morePublications =
+        document.getElementById(
+            "morePublications"
+        );
+
+
+    const buttonText =
+        document.getElementById(
+            "publicationButtonText"
+        );
+
+
+    const buttonIcon =
+        document.getElementById(
+            "publicationButtonIcon"
+        );
+
+
+
+    if (
+        showMoreButton &&
+        morePublications &&
+        buttonText &&
+        buttonIcon
+    ) {
+
+
+        /* Hide older publications */
+
+        morePublications.style.display =
+            "none";
+
+
+        showMoreButton.addEventListener(
+            "click",
+            function () {
+
+
+                const isHidden =
+                    morePublications.style.display ===
+                    "none";
+
+
+                /* =================================================
+                   SHOW ALL PUBLICATIONS
+                ================================================= */
+
+                if (isHidden) {
+
+
+                    morePublications.style.display =
+                        "block";
+
+
+                    buttonText.textContent =
+                        "Show Less Publications";
+
+
+                    buttonIcon.style.transform =
+                        "rotate(180deg)";
+
+
+                    showMoreButton.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+
+                }
+
+
+                /* =================================================
+                   SHOW ONLY LATEST 3
+                ================================================= */
+
+                else {
+
+
+                    morePublications.style.display =
+                        "none";
+
+
+                    buttonText.textContent =
+                        "Show More Publications";
+
+
+                    buttonIcon.style.transform =
+                        "rotate(0deg)";
+
+
+                    showMoreButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    const publicationsSection =
+                        document.querySelector(
+                            ".publications-section"
+                        );
+
+
+                    if (publicationsSection) {
+
+
+                        publicationsSection.scrollIntoView({
+
+                            behavior: "smooth",
+
+                            block: "start"
+
+                        });
+
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>
